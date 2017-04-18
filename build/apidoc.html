@@ -1,0 +1,4398 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="https://github.com/coinbase/coinbase-node"
+
+    >coinbase (v2.0.6)</a>
+</h1>
+<h4>The Coinbase API for Node.js</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.coinbase">module coinbase</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coinbase.Base">
+            function <span class="apidocSignatureSpan">coinbase.</span>Base
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coinbase.Client">
+            function <span class="apidocSignatureSpan">coinbase.</span>Client
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coinbase.ClientBase">
+            function <span class="apidocSignatureSpan">coinbase.</span>ClientBase
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coinbase.model.Account">
+            function <span class="apidocSignatureSpan">coinbase.</span>model.Account
+            <span class="apidocSignatureSpan">(client, data)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coinbase.model.Address">
+            function <span class="apidocSignatureSpan">coinbase.</span>model.Address
+            <span class="apidocSignatureSpan">(client, data, account)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coinbase.model.Buy">
+            function <span class="apidocSignatureSpan">coinbase.</span>model.Buy
+            <span class="apidocSignatureSpan">(client, data, account)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coinbase.model.Checkout">
+            function <span class="apidocSignatureSpan">coinbase.</span>model.Checkout
+            <span class="apidocSignatureSpan">(client, data)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coinbase.model.Deposit">
+            function <span class="apidocSignatureSpan">coinbase.</span>model.Deposit
+            <span class="apidocSignatureSpan">(client, data, account)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coinbase.model.Order">
+            function <span class="apidocSignatureSpan">coinbase.</span>model.Order
+            <span class="apidocSignatureSpan">(client, data)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coinbase.model.Sell">
+            function <span class="apidocSignatureSpan">coinbase.</span>model.Sell
+            <span class="apidocSignatureSpan">(client, data, account)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coinbase.model.Transaction">
+            function <span class="apidocSignatureSpan">coinbase.</span>model.Transaction
+            <span class="apidocSignatureSpan">(client, data, account)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coinbase.model.User">
+            function <span class="apidocSignatureSpan">coinbase.</span>model.User
+            <span class="apidocSignatureSpan">(client, data)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coinbase.model.Withdrawal">
+            function <span class="apidocSignatureSpan">coinbase.</span>model.Withdrawal
+            <span class="apidocSignatureSpan">(client, data, account)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">coinbase.</span>Base.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">coinbase.</span>Client.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">coinbase.</span>ClientBase.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">coinbase.</span>errorHandler</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">coinbase.</span>model</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">coinbase.</span>model.Account.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">coinbase.</span>model.Address.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">coinbase.</span>model.Buy.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">coinbase.</span>model.Checkout.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">coinbase.</span>model.Deposit.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">coinbase.</span>model.Order.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">coinbase.</span>model.Sell.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">coinbase.</span>model.Transaction.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">coinbase.</span>model.User.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">coinbase.</span>model.Withdrawal.prototype</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.coinbase.Base">module coinbase.Base</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coinbase.Base.Base">
+            function <span class="apidocSignatureSpan">coinbase.</span>Base
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.coinbase.Base.prototype">module coinbase.Base.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coinbase.Base.prototype.dumpJSON">
+            function <span class="apidocSignatureSpan">coinbase.Base.prototype.</span>dumpJSON
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coinbase.Base.prototype.getProps">
+            function <span class="apidocSignatureSpan">coinbase.Base.prototype.</span>getProps
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coinbase.Base.prototype.hasField">
+            function <span class="apidocSignatureSpan">coinbase.Base.prototype.</span>hasField
+            <span class="apidocSignatureSpan">(obj, field)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coinbase.Base.prototype.toString">
+            function <span class="apidocSignatureSpan">coinbase.Base.prototype.</span>toString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.coinbase.Client">module coinbase.Client</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coinbase.Client.Client">
+            function <span class="apidocSignatureSpan">coinbase.</span>Client
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.coinbase.Client.prototype">module coinbase.Client.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coinbase.Client.prototype.createAccount">
+            function <span class="apidocSignatureSpan">coinbase.Client.prototype.</span>createAccount
+            <span class="apidocSignatureSpan">(args, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coinbase.Client.prototype.createCheckout">
+            function <span class="apidocSignatureSpan">coinbase.Client.prototype.</span>createCheckout
+            <span class="apidocSignatureSpan">(args, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coinbase.Client.prototype.createOrder">
+            function <span class="apidocSignatureSpan">coinbase.Client.prototype.</span>createOrder
+            <span class="apidocSignatureSpan">(args, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coinbase.Client.prototype.getAccount">
+            function <span class="apidocSignatureSpan">coinbase.Client.prototype.</span>getAccount
+            <span class="apidocSignatureSpan">(account_id, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coinbase.Client.prototype.getAccounts">
+            function <span class="apidocSignatureSpan">coinbase.Client.prototype.</span>getAccounts
+            <span class="apidocSignatureSpan">(args, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coinbase.Client.prototype.getBuyPrice">
+            function <span class="apidocSignatureSpan">coinbase.Client.prototype.</span>getBuyPrice
+            <span class="apidocSignatureSpan">(params, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coinbase.Client.prototype.getCheckout">
+            function <span class="apidocSignatureSpan">coinbase.Client.prototype.</span>getCheckout
+            <span class="apidocSignatureSpan">(checkoutId, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coinbase.Client.prototype.getCheckouts">
+            function <span class="apidocSignatureSpan">coinbase.Client.prototype.</span>getCheckouts
+            <span class="apidocSignatureSpan">(args, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coinbase.Client.prototype.getCurrencies">
+            function <span class="apidocSignatureSpan">coinbase.Client.prototype.</span>getCurrencies
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coinbase.Client.prototype.getCurrentUser">
+            function <span class="apidocSignatureSpan">coinbase.Client.prototype.</span>getCurrentUser
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coinbase.Client.prototype.getExchangeRates">
+            function <span class="apidocSignatureSpan">coinbase.Client.prototype.</span>getExchangeRates
+            <span class="apidocSignatureSpan">(params, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coinbase.Client.prototype.getHistoricPrices">
+            function <span class="apidocSignatureSpan">coinbase.Client.prototype.</span>getHistoricPrices
+            <span class="apidocSignatureSpan">(params, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coinbase.Client.prototype.getMerchant">
+            function <span class="apidocSignatureSpan">coinbase.Client.prototype.</span>getMerchant
+            <span class="apidocSignatureSpan">(merchantId, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coinbase.Client.prototype.getNotification">
+            function <span class="apidocSignatureSpan">coinbase.Client.prototype.</span>getNotification
+            <span class="apidocSignatureSpan">(notificationId, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coinbase.Client.prototype.getNotifications">
+            function <span class="apidocSignatureSpan">coinbase.Client.prototype.</span>getNotifications
+            <span class="apidocSignatureSpan">(args, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coinbase.Client.prototype.getOrder">
+            function <span class="apidocSignatureSpan">coinbase.Client.prototype.</span>getOrder
+            <span class="apidocSignatureSpan">(orderId, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coinbase.Client.prototype.getOrders">
+            function <span class="apidocSignatureSpan">coinbase.Client.prototype.</span>getOrders
+            <span class="apidocSignatureSpan">(args, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coinbase.Client.prototype.getPaymentMethod">
+            function <span class="apidocSignatureSpan">coinbase.Client.prototype.</span>getPaymentMethod
+            <span class="apidocSignatureSpan">(methodId, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coinbase.Client.prototype.getPaymentMethods">
+            function <span class="apidocSignatureSpan">coinbase.Client.prototype.</span>getPaymentMethods
+            <span class="apidocSignatureSpan">(args, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coinbase.Client.prototype.getSellPrice">
+            function <span class="apidocSignatureSpan">coinbase.Client.prototype.</span>getSellPrice
+            <span class="apidocSignatureSpan">(params, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coinbase.Client.prototype.getSpotPrice">
+            function <span class="apidocSignatureSpan">coinbase.Client.prototype.</span>getSpotPrice
+            <span class="apidocSignatureSpan">(params, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coinbase.Client.prototype.getTime">
+            function <span class="apidocSignatureSpan">coinbase.Client.prototype.</span>getTime
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coinbase.Client.prototype.getUser">
+            function <span class="apidocSignatureSpan">coinbase.Client.prototype.</span>getUser
+            <span class="apidocSignatureSpan">(userId, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coinbase.Client.prototype.refresh">
+            function <span class="apidocSignatureSpan">coinbase.Client.prototype.</span>refresh
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coinbase.Client.prototype.toString">
+            function <span class="apidocSignatureSpan">coinbase.Client.prototype.</span>toString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coinbase.Client.prototype.verifyCallback">
+            function <span class="apidocSignatureSpan">coinbase.Client.prototype.</span>verifyCallback
+            <span class="apidocSignatureSpan">(body, signature)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.coinbase.ClientBase">module coinbase.ClientBase</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coinbase.ClientBase.ClientBase">
+            function <span class="apidocSignatureSpan">coinbase.</span>ClientBase
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.coinbase.ClientBase.prototype">module coinbase.ClientBase.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coinbase.ClientBase.prototype._deleteHttp">
+            function <span class="apidocSignatureSpan">coinbase.ClientBase.prototype.</span>_deleteHttp
+            <span class="apidocSignatureSpan">(path, callback, headers)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coinbase.ClientBase.prototype._generateReqOptions">
+            function <span class="apidocSignatureSpan">coinbase.ClientBase.prototype.</span>_generateReqOptions
+            <span class="apidocSignatureSpan">(url, path, body, method, headers)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coinbase.ClientBase.prototype._generateSignature">
+            function <span class="apidocSignatureSpan">coinbase.ClientBase.prototype.</span>_generateSignature
+            <span class="apidocSignatureSpan">(path, method, bodyStr)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coinbase.ClientBase.prototype._getAllHttp">
+            function <span class="apidocSignatureSpan">coinbase.ClientBase.prototype.</span>_getAllHttp
+            <span class="apidocSignatureSpan">(opts, callback, headers)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coinbase.ClientBase.prototype._getHttp">
+            function <span class="apidocSignatureSpan">coinbase.ClientBase.prototype.</span>_getHttp
+            <span class="apidocSignatureSpan">(path, args, callback, headers)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coinbase.ClientBase.prototype._getOneHttp">
+            function <span class="apidocSignatureSpan">coinbase.ClientBase.prototype.</span>_getOneHttp
+            <span class="apidocSignatureSpan">(args, callback, headers)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coinbase.ClientBase.prototype._postHttp">
+            function <span class="apidocSignatureSpan">coinbase.ClientBase.prototype.</span>_postHttp
+            <span class="apidocSignatureSpan">(path, body, callback, headers)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coinbase.ClientBase.prototype._postOneHttp">
+            function <span class="apidocSignatureSpan">coinbase.ClientBase.prototype.</span>_postOneHttp
+            <span class="apidocSignatureSpan">(opts, callback, headers)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coinbase.ClientBase.prototype._putHttp">
+            function <span class="apidocSignatureSpan">coinbase.ClientBase.prototype.</span>_putHttp
+            <span class="apidocSignatureSpan">(path, body, callback, headers)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coinbase.ClientBase.prototype._setAccessToken">
+            function <span class="apidocSignatureSpan">coinbase.ClientBase.prototype.</span>_setAccessToken
+            <span class="apidocSignatureSpan">(path)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coinbase.ClientBase.prototype._stringToClass">
+            function <span class="apidocSignatureSpan">coinbase.ClientBase.prototype.</span>_stringToClass
+            <span class="apidocSignatureSpan">(name)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.coinbase.errorHandler">module coinbase.errorHandler</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coinbase.errorHandler.handleError">
+            function <span class="apidocSignatureSpan">coinbase.errorHandler.</span>handleError
+            <span class="apidocSignatureSpan">(err, obj, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coinbase.errorHandler.handleHttpError">
+            function <span class="apidocSignatureSpan">coinbase.errorHandler.</span>handleHttpError
+            <span class="apidocSignatureSpan">(err, response, callback)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.coinbase.model">module coinbase.model</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coinbase.model.Account">
+            function <span class="apidocSignatureSpan">coinbase.model.</span>Account
+            <span class="apidocSignatureSpan">(client, data)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coinbase.model.Address">
+            function <span class="apidocSignatureSpan">coinbase.model.</span>Address
+            <span class="apidocSignatureSpan">(client, data, account)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coinbase.model.Buy">
+            function <span class="apidocSignatureSpan">coinbase.model.</span>Buy
+            <span class="apidocSignatureSpan">(client, data, account)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coinbase.model.Checkout">
+            function <span class="apidocSignatureSpan">coinbase.model.</span>Checkout
+            <span class="apidocSignatureSpan">(client, data)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coinbase.model.Deposit">
+            function <span class="apidocSignatureSpan">coinbase.model.</span>Deposit
+            <span class="apidocSignatureSpan">(client, data, account)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coinbase.model.Merchant">
+            function <span class="apidocSignatureSpan">coinbase.model.</span>Merchant
+            <span class="apidocSignatureSpan">(client, data)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coinbase.model.Notification">
+            function <span class="apidocSignatureSpan">coinbase.model.</span>Notification
+            <span class="apidocSignatureSpan">(client, data)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coinbase.model.Order">
+            function <span class="apidocSignatureSpan">coinbase.model.</span>Order
+            <span class="apidocSignatureSpan">(client, data)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coinbase.model.PaymentMethod">
+            function <span class="apidocSignatureSpan">coinbase.model.</span>PaymentMethod
+            <span class="apidocSignatureSpan">(client, data)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coinbase.model.Sell">
+            function <span class="apidocSignatureSpan">coinbase.model.</span>Sell
+            <span class="apidocSignatureSpan">(client, data, account)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coinbase.model.Transaction">
+            function <span class="apidocSignatureSpan">coinbase.model.</span>Transaction
+            <span class="apidocSignatureSpan">(client, data, account)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coinbase.model.User">
+            function <span class="apidocSignatureSpan">coinbase.model.</span>User
+            <span class="apidocSignatureSpan">(client, data)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coinbase.model.Withdrawal">
+            function <span class="apidocSignatureSpan">coinbase.model.</span>Withdrawal
+            <span class="apidocSignatureSpan">(client, data, account)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.coinbase.model.Account">module coinbase.model.Account</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coinbase.model.Account.Account">
+            function <span class="apidocSignatureSpan">coinbase.model.</span>Account
+            <span class="apidocSignatureSpan">(client, data)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.coinbase.model.Account.prototype">module coinbase.model.Account.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coinbase.model.Account.prototype.buy">
+            function <span class="apidocSignatureSpan">coinbase.model.Account.prototype.</span>buy
+            <span class="apidocSignatureSpan">(args, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coinbase.model.Account.prototype.createAddress">
+            function <span class="apidocSignatureSpan">coinbase.model.Account.prototype.</span>createAddress
+            <span class="apidocSignatureSpan">(args, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coinbase.model.Account.prototype.delete">
+            function <span class="apidocSignatureSpan">coinbase.model.Account.prototype.</span>delete
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coinbase.model.Account.prototype.deposit">
+            function <span class="apidocSignatureSpan">coinbase.model.Account.prototype.</span>deposit
+            <span class="apidocSignatureSpan">(args, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coinbase.model.Account.prototype.getAddress">
+            function <span class="apidocSignatureSpan">coinbase.model.Account.prototype.</span>getAddress
+            <span class="apidocSignatureSpan">(addressId, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coinbase.model.Account.prototype.getAddresses">
+            function <span class="apidocSignatureSpan">coinbase.model.Account.prototype.</span>getAddresses
+            <span class="apidocSignatureSpan">(args, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coinbase.model.Account.prototype.getBuy">
+            function <span class="apidocSignatureSpan">coinbase.model.Account.prototype.</span>getBuy
+            <span class="apidocSignatureSpan">(buy_id, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coinbase.model.Account.prototype.getBuys">
+            function <span class="apidocSignatureSpan">coinbase.model.Account.prototype.</span>getBuys
+            <span class="apidocSignatureSpan">(args, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coinbase.model.Account.prototype.getDeposit">
+            function <span class="apidocSignatureSpan">coinbase.model.Account.prototype.</span>getDeposit
+            <span class="apidocSignatureSpan">(deposit_id, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coinbase.model.Account.prototype.getDeposits">
+            function <span class="apidocSignatureSpan">coinbase.model.Account.prototype.</span>getDeposits
+            <span class="apidocSignatureSpan">(args, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coinbase.model.Account.prototype.getSell">
+            function <span class="apidocSignatureSpan">coinbase.model.Account.prototype.</span>getSell
+            <span class="apidocSignatureSpan">(sell_id, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coinbase.model.Account.prototype.getSells">
+            function <span class="apidocSignatureSpan">coinbase.model.Account.prototype.</span>getSells
+            <span class="apidocSignatureSpan">(args, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coinbase.model.Account.prototype.getTransaction">
+            function <span class="apidocSignatureSpan">coinbase.model.Account.prototype.</span>getTransaction
+            <span class="apidocSignatureSpan">(transaction_id, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coinbase.model.Account.prototype.getTransactions">
+            function <span class="apidocSignatureSpan">coinbase.model.Account.prototype.</span>getTransactions
+            <span class="apidocSignatureSpan">(args, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coinbase.model.Account.prototype.getWithdrawal">
+            function <span class="apidocSignatureSpan">coinbase.model.Account.prototype.</span>getWithdrawal
+            <span class="apidocSignatureSpan">(withdrawal_id, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coinbase.model.Account.prototype.getWithdrawals">
+            function <span class="apidocSignatureSpan">coinbase.model.Account.prototype.</span>getWithdrawals
+            <span class="apidocSignatureSpan">(args, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coinbase.model.Account.prototype.requestMoney">
+            function <span class="apidocSignatureSpan">coinbase.model.Account.prototype.</span>requestMoney
+            <span class="apidocSignatureSpan">(args, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coinbase.model.Account.prototype.sell">
+            function <span class="apidocSignatureSpan">coinbase.model.Account.prototype.</span>sell
+            <span class="apidocSignatureSpan">(args, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coinbase.model.Account.prototype.sendMoney">
+            function <span class="apidocSignatureSpan">coinbase.model.Account.prototype.</span>sendMoney
+            <span class="apidocSignatureSpan">(args, callback, twoFactorAuth)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coinbase.model.Account.prototype.setPrimary">
+            function <span class="apidocSignatureSpan">coinbase.model.Account.prototype.</span>setPrimary
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coinbase.model.Account.prototype.transferMoney">
+            function <span class="apidocSignatureSpan">coinbase.model.Account.prototype.</span>transferMoney
+            <span class="apidocSignatureSpan">(args, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coinbase.model.Account.prototype.update">
+            function <span class="apidocSignatureSpan">coinbase.model.Account.prototype.</span>update
+            <span class="apidocSignatureSpan">(args, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coinbase.model.Account.prototype.withdraw">
+            function <span class="apidocSignatureSpan">coinbase.model.Account.prototype.</span>withdraw
+            <span class="apidocSignatureSpan">(args, callback)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.coinbase.model.Address">module coinbase.model.Address</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coinbase.model.Address.Address">
+            function <span class="apidocSignatureSpan">coinbase.model.</span>Address
+            <span class="apidocSignatureSpan">(client, data, account)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.coinbase.model.Address.prototype">module coinbase.model.Address.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coinbase.model.Address.prototype.getTransactions">
+            function <span class="apidocSignatureSpan">coinbase.model.Address.prototype.</span>getTransactions
+            <span class="apidocSignatureSpan">(args, callback)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.coinbase.model.Buy">module coinbase.model.Buy</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coinbase.model.Buy.Buy">
+            function <span class="apidocSignatureSpan">coinbase.model.</span>Buy
+            <span class="apidocSignatureSpan">(client, data, account)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.coinbase.model.Buy.prototype">module coinbase.model.Buy.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coinbase.model.Buy.prototype.commit">
+            function <span class="apidocSignatureSpan">coinbase.model.Buy.prototype.</span>commit
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.coinbase.model.Checkout">module coinbase.model.Checkout</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coinbase.model.Checkout.Checkout">
+            function <span class="apidocSignatureSpan">coinbase.model.</span>Checkout
+            <span class="apidocSignatureSpan">(client, data)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.coinbase.model.Checkout.prototype">module coinbase.model.Checkout.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coinbase.model.Checkout.prototype.createOrder">
+            function <span class="apidocSignatureSpan">coinbase.model.Checkout.prototype.</span>createOrder
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coinbase.model.Checkout.prototype.getOrders">
+            function <span class="apidocSignatureSpan">coinbase.model.Checkout.prototype.</span>getOrders
+            <span class="apidocSignatureSpan">(args, callback)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.coinbase.model.Deposit">module coinbase.model.Deposit</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coinbase.model.Deposit.Deposit">
+            function <span class="apidocSignatureSpan">coinbase.model.</span>Deposit
+            <span class="apidocSignatureSpan">(client, data, account)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.coinbase.model.Deposit.prototype">module coinbase.model.Deposit.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coinbase.model.Deposit.prototype.commit">
+            function <span class="apidocSignatureSpan">coinbase.model.Deposit.prototype.</span>commit
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.coinbase.model.Order">module coinbase.model.Order</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coinbase.model.Order.Order">
+            function <span class="apidocSignatureSpan">coinbase.model.</span>Order
+            <span class="apidocSignatureSpan">(client, data)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.coinbase.model.Order.prototype">module coinbase.model.Order.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coinbase.model.Order.prototype.refund">
+            function <span class="apidocSignatureSpan">coinbase.model.Order.prototype.</span>refund
+            <span class="apidocSignatureSpan">(args, callback)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.coinbase.model.Sell">module coinbase.model.Sell</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coinbase.model.Sell.Sell">
+            function <span class="apidocSignatureSpan">coinbase.model.</span>Sell
+            <span class="apidocSignatureSpan">(client, data, account)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.coinbase.model.Sell.prototype">module coinbase.model.Sell.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coinbase.model.Sell.prototype.commit">
+            function <span class="apidocSignatureSpan">coinbase.model.Sell.prototype.</span>commit
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.coinbase.model.Transaction">module coinbase.model.Transaction</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coinbase.model.Transaction.Transaction">
+            function <span class="apidocSignatureSpan">coinbase.model.</span>Transaction
+            <span class="apidocSignatureSpan">(client, data, account)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.coinbase.model.Transaction.prototype">module coinbase.model.Transaction.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coinbase.model.Transaction.prototype.cancel">
+            function <span class="apidocSignatureSpan">coinbase.model.Transaction.prototype.</span>cancel
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coinbase.model.Transaction.prototype.complete">
+            function <span class="apidocSignatureSpan">coinbase.model.Transaction.prototype.</span>complete
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coinbase.model.Transaction.prototype.resend">
+            function <span class="apidocSignatureSpan">coinbase.model.Transaction.prototype.</span>resend
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.coinbase.model.User">module coinbase.model.User</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coinbase.model.User.User">
+            function <span class="apidocSignatureSpan">coinbase.model.</span>User
+            <span class="apidocSignatureSpan">(client, data)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.coinbase.model.User.prototype">module coinbase.model.User.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coinbase.model.User.prototype.showAuth">
+            function <span class="apidocSignatureSpan">coinbase.model.User.prototype.</span>showAuth
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coinbase.model.User.prototype.update">
+            function <span class="apidocSignatureSpan">coinbase.model.User.prototype.</span>update
+            <span class="apidocSignatureSpan">(args, callback)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.coinbase.model.Withdrawal">module coinbase.model.Withdrawal</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coinbase.model.Withdrawal.Withdrawal">
+            function <span class="apidocSignatureSpan">coinbase.model.</span>Withdrawal
+            <span class="apidocSignatureSpan">(client, data, account)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.coinbase.model.Withdrawal.prototype">module coinbase.model.Withdrawal.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coinbase.model.Withdrawal.prototype.commit">
+            function <span class="apidocSignatureSpan">coinbase.model.Withdrawal.prototype.</span>commit
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.coinbase" id="apidoc.module.coinbase">module coinbase</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.coinbase.Base" id="apidoc.element.coinbase.Base">
+        function <span class="apidocSignatureSpan">coinbase.</span>Base
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Base() {
+  if (!(this instanceof Base)) {
+    return new Base();
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.coinbase.Client" id="apidoc.element.coinbase.Client">
+        function <span class="apidocSignatureSpan">coinbase.</span>Client
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Client(opts) {
+
+  if (!(this instanceof Client)) {
+    return new Client(opts);
+  }
+  ClientBase.call(this, opts);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+With a `client instance`, you can now make API calls. We&#x27;ve included some examples below, but in general the library has Javascript
+ prototypes for each of the objects described in our [REST API documentation](https://developers.coinbase.com/api/v2).  These classes
+ each have methods for making the relevant API calls; for instance, ``coinbase.model.Transaction.complete`` maps to the [complete
+ bitcoin request](https://developers.coinbase.com/api/v2#complete-request-money) API endpoint. The comments of each method in the
+ code references the endpoint it implements. Each API method returns an ``object`` representing the JSON response from the API.
+
+**Listing available accounts**
+
+```javascript
+var coinbase = require(&#x27;coinbase&#x27;);
+var client   = new coinbase.<span class="apidocCodeKeywordSpan">Client</span>({&#x27;apiKey&#x27;: mykey, &#x27;apiSecret&#x27;:
+mysecret});
+
+client.getAccounts({}, function(err, accounts) {
+  accounts.forEach(function(acct) {
+    console.log(&#x27;my bal: &#x27; + acct.balance.amount + &#x27; for &#x27; + acct.name);
+  });
+});
+```
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.coinbase.ClientBase" id="apidoc.element.coinbase.ClientBase">
+        function <span class="apidocSignatureSpan">coinbase.</span>ClientBase
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function ClientBase(opts) {
+
+  if (!(this instanceof ClientBase)) {
+    return new ClientBase(opts);
+  }
+
+  // assign defaults and options to the context
+  assign(this, {
+    baseApiUri: BASE_URI,
+    tokenUri: TOKEN_ENDPOINT_URI,
+    caFile: CERT_STORE,
+    strictSSL: true
+  }, opts);
+
+  // check for the different auth strategies
+  var api = !!(this.apiKey &#x26;&#x26; this.apiSecret)
+  var oauth = !!this.accessToken;
+
+  // XOR
+  if (!(api ^ oauth)) {
+    throw new Error(&#x27;you must either provide an &#x22;accessToken&#x22; or the &#x22;apiKey&#x22; &#x26; &#x22;apiSecret&#x22; parameters&#x27;);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.coinbase.model.Account" id="apidoc.element.coinbase.model.Account">
+        function <span class="apidocSignatureSpan">coinbase.</span>model.Account
+        <span class="apidocSignatureSpan">(client, data)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Account(client, data) {
+  if (!(this instanceof Account)) {
+    return new Account(client, data);
+  }
+  AccountBase.call(this, client, data);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.coinbase.model.Address" id="apidoc.element.coinbase.model.Address">
+        function <span class="apidocSignatureSpan">coinbase.</span>model.Address
+        <span class="apidocSignatureSpan">(client, data, account)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Address(client, data, account) {
+  if (!(this instanceof Address)) {
+    return new Address(client, data, account);
+  }
+  BaseModel.call(this, client, data);
+  if (!account) { throw new Error(&#x22;no account arg&#x22;); }
+  if (!account.id) { throw new Error(&#x22;account has no id&#x22;); }
+  this.account = account;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.coinbase.model.Buy" id="apidoc.element.coinbase.model.Buy">
+        function <span class="apidocSignatureSpan">coinbase.</span>model.Buy
+        <span class="apidocSignatureSpan">(client, data, account)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Buy(client, data, account) {
+  if (!(this instanceof Buy)) {
+    return new Buy(client, data, account);
+  }
+  Transfer.call(this, client, data, account);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.coinbase.model.Checkout" id="apidoc.element.coinbase.model.Checkout">
+        function <span class="apidocSignatureSpan">coinbase.</span>model.Checkout
+        <span class="apidocSignatureSpan">(client, data)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Checkout(client, data) {
+  if (!(this instanceof Checkout)) {
+    return new Checkout(client, data);
+  }
+  BaseModel.call(this, client, data);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.coinbase.model.Deposit" id="apidoc.element.coinbase.model.Deposit">
+        function <span class="apidocSignatureSpan">coinbase.</span>model.Deposit
+        <span class="apidocSignatureSpan">(client, data, account)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Deposit(client, data, account) {
+  if (!(this instanceof Deposit)) {
+    return new Deposit(client, data, account);
+  }
+  Transfer.call(this, client, data, account);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.coinbase.model.Order" id="apidoc.element.coinbase.model.Order">
+        function <span class="apidocSignatureSpan">coinbase.</span>model.Order
+        <span class="apidocSignatureSpan">(client, data)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Order(client, data) {
+  if (!(this instanceof Order)) {
+    return new Order(client, data);
+  }
+  BaseModel.call(this, client, data);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.coinbase.model.Sell" id="apidoc.element.coinbase.model.Sell">
+        function <span class="apidocSignatureSpan">coinbase.</span>model.Sell
+        <span class="apidocSignatureSpan">(client, data, account)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Sell(client, data, account) {
+  if (!(this instanceof Sell)) {
+    return new Sell(client, data, account);
+  }
+  Transfer.call(this, client, data, account);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.coinbase.model.Transaction" id="apidoc.element.coinbase.model.Transaction">
+        function <span class="apidocSignatureSpan">coinbase.</span>model.Transaction
+        <span class="apidocSignatureSpan">(client, data, account)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Transaction(client, data, account) {
+  if (!(this instanceof Transaction)) {
+    return new Transaction(client, data, account);
+  }
+  BaseModel.call(this, client, data);
+  if (!account) { throw new Error(&#x22;no account arg&#x22;); }
+  if (!account.id) { throw new Error(&#x22;account has no id&#x22;); }
+  this.account = account;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.coinbase.model.User" id="apidoc.element.coinbase.model.User">
+        function <span class="apidocSignatureSpan">coinbase.</span>model.User
+        <span class="apidocSignatureSpan">(client, data)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function User(client, data) {
+  if (!(this instanceof User)) {
+    return new User(client, data);
+  }
+  BaseModel.call(this, client, data);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.coinbase.model.Withdrawal" id="apidoc.element.coinbase.model.Withdrawal">
+        function <span class="apidocSignatureSpan">coinbase.</span>model.Withdrawal
+        <span class="apidocSignatureSpan">(client, data, account)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Withdrawal(client, data, account) {
+  if (!(this instanceof Withdrawal)) {
+    return new Withdrawal(client, data, account);
+  }
+  Transfer.call(this, client, data, account);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.coinbase.Base" id="apidoc.module.coinbase.Base">module coinbase.Base</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.coinbase.Base.Base" id="apidoc.element.coinbase.Base.Base">
+        function <span class="apidocSignatureSpan">coinbase.</span>Base
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Base() {
+  if (!(this instanceof Base)) {
+    return new Base();
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.coinbase.Base.prototype" id="apidoc.module.coinbase.Base.prototype">module coinbase.Base.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.coinbase.Base.prototype.dumpJSON" id="apidoc.element.coinbase.Base.prototype.dumpJSON">
+        function <span class="apidocSignatureSpan">coinbase.Base.prototype.</span>dumpJSON
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">dumpJSON = function () {
+  return JSON.stringify(this.getProps());
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+};
+
+Base.prototype.dumpJSON = function() {
+  return JSON.stringify(this.getProps());
+};
+
+Base.prototype.toString = function() {
+  return this.<span class="apidocCodeKeywordSpan">dumpJSON</span>();
+};
+
+module.exports = Base;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.coinbase.Base.prototype.getProps" id="apidoc.element.coinbase.Base.prototype.getProps">
+        function <span class="apidocSignatureSpan">coinbase.Base.prototype.</span>getProps
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getProps = function () {
+  var tmp = {};
+  assign(tmp, this);
+  delete tmp.client;
+  delete tmp.account;
+  return tmp;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  assign(tmp, this);
+  delete tmp.client;
+  delete tmp.account;
+  return tmp;
+};
+
+Base.prototype.dumpJSON = function() {
+  return JSON.stringify(this.<span class="apidocCodeKeywordSpan">getProps</span>());
+};
+
+Base.prototype.toString = function() {
+  return this.dumpJSON();
+};
+
+module.exports = Base;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.coinbase.Base.prototype.hasField" id="apidoc.element.coinbase.Base.prototype.hasField">
+        function <span class="apidocSignatureSpan">coinbase.Base.prototype.</span>hasField
+        <span class="apidocSignatureSpan">(obj, field)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">hasField = function (obj, field) {
+  return (obj &#x26;&#x26; obj.hasOwnProperty(field) &#x26;&#x26; obj[field]);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+// };
+// ```
+//
+ClientBase.prototype._getAllHttp = function(opts, callback, headers) {
+var self = this;
+var args = {}
+var path;
+if (this.<span class="apidocCodeKeywordSpan">hasField</span>(opts, &#x27;next_uri&#x27;)) {
+  path = opts.next_uri.replace(&#x27;/v2/&#x27;, &#x27;&#x27;);
+  args = null;
+} else {
+  path = opts.colName;
+  if (this.hasField(opts, &#x27;starting_after&#x27;)) {
+    args.starting_after = opts.starting_after;
+  }
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.coinbase.Base.prototype.toString" id="apidoc.element.coinbase.Base.prototype.toString">
+        function <span class="apidocSignatureSpan">coinbase.Base.prototype.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toString = function () {
+  return this.dumpJSON();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.coinbase.Client" id="apidoc.module.coinbase.Client">module coinbase.Client</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.coinbase.Client.Client" id="apidoc.element.coinbase.Client.Client">
+        function <span class="apidocSignatureSpan">coinbase.</span>Client
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Client(opts) {
+
+  if (!(this instanceof Client)) {
+    return new Client(opts);
+  }
+  ClientBase.call(this, opts);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+With a `client instance`, you can now make API calls. We&#x27;ve included some examples below, but in general the library has Javascript
+ prototypes for each of the objects described in our [REST API documentation](https://developers.coinbase.com/api/v2).  These classes
+ each have methods for making the relevant API calls; for instance, ``coinbase.model.Transaction.complete`` maps to the [complete
+ bitcoin request](https://developers.coinbase.com/api/v2#complete-request-money) API endpoint. The comments of each method in the
+ code references the endpoint it implements. Each API method returns an ``object`` representing the JSON response from the API.
+
+**Listing available accounts**
+
+```javascript
+var coinbase = require(&#x27;coinbase&#x27;);
+var client   = new coinbase.<span class="apidocCodeKeywordSpan">Client</span>({&#x27;apiKey&#x27;: mykey, &#x27;apiSecret&#x27;:
+mysecret});
+
+client.getAccounts({}, function(err, accounts) {
+  accounts.forEach(function(acct) {
+    console.log(&#x27;my bal: &#x27; + acct.balance.amount + &#x27; for &#x27; + acct.name);
+  });
+});
+```
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.coinbase.Client.prototype" id="apidoc.module.coinbase.Client.prototype">module coinbase.Client.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.coinbase.Client.prototype.createAccount" id="apidoc.element.coinbase.Client.prototype.createAccount">
+        function <span class="apidocSignatureSpan">coinbase.Client.prototype.</span>createAccount
+        <span class="apidocSignatureSpan">(args, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">createAccount = function (args, callback) {
+
+  var opts = {
+    &#x27;colName&#x27;  : &#x27;accounts&#x27;,
+    &#x27;ObjFunc&#x27;  : Account,
+    &#x27;params&#x27;   : args
+  };
+
+  this._postOneHttp(opts, callback);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.coinbase.Client.prototype.createCheckout" id="apidoc.element.coinbase.Client.prototype.createCheckout">
+        function <span class="apidocSignatureSpan">coinbase.Client.prototype.</span>createCheckout
+        <span class="apidocSignatureSpan">(args, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">createCheckout = function (args, callback) {
+
+  var opts = {
+    &#x27;colName&#x27;  : &#x27;checkouts&#x27;,
+    &#x27;ObjFunc&#x27; : Checkout,
+    &#x27;params&#x27; : args
+  };
+
+  this._postOneHttp(opts, callback);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.coinbase.Client.prototype.createOrder" id="apidoc.element.coinbase.Client.prototype.createOrder">
+        function <span class="apidocSignatureSpan">coinbase.Client.prototype.</span>createOrder
+        <span class="apidocSignatureSpan">(args, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">createOrder = function (args, callback) {
+
+  var opts = {
+    &#x27;colName&#x27;  : &#x27;orders&#x27;,
+    &#x27;ObjFunc&#x27; : Order,
+    &#x27;params&#x27; : args
+  };
+
+  this._postOneHttp(opts, callback);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.coinbase.Client.prototype.getAccount" id="apidoc.element.coinbase.Client.prototype.getAccount">
+        function <span class="apidocSignatureSpan">coinbase.Client.prototype.</span>getAccount
+        <span class="apidocSignatureSpan">(account_id, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getAccount = function (account_id, callback) {
+
+  var opts = {
+    &#x27;path&#x27;     : &#x27;accounts/&#x27; + account_id,
+    &#x27;ObjFunc&#x27;  : Account
+  };
+  this._getOneHttp(opts, callback);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+**Get Balance from an Account Id**
+
+```javascript
+var coinbase = require(&#x27;coinbase&#x27;);
+var client   = new coinbase.Client({&#x27;apiKey&#x27;: mykey, &#x27;apiSecret&#x27;: mysecret});
+
+client.<span class="apidocCodeKeywordSpan">getAccount</span>(&#x27;&#x3c;ACCOUNT ID&#x3e;&#x27;, function(err, account) {
+  console.log(&#x27;bal: &#x27; + account.balance.amount + &#x27; currency: &#x27; + account.balance.currency);
+});
+```
+
+**Selling bitcoin**
+
+```javascript
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.coinbase.Client.prototype.getAccounts" id="apidoc.element.coinbase.Client.prototype.getAccounts">
+        function <span class="apidocSignatureSpan">coinbase.Client.prototype.</span>getAccounts
+        <span class="apidocSignatureSpan">(args, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getAccounts = function (args, callback) {
+
+  var opts = {
+    &#x27;colName&#x27;  : &#x27;accounts&#x27;,
+    &#x27;ObjFunc&#x27;  : Account
+  };
+
+  this._getAllHttp(_.assign(args || {}, opts), callback)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+**Listing available accounts**
+
+```javascript
+var coinbase = require(&#x27;coinbase&#x27;);
+var client   = new coinbase.Client({&#x27;apiKey&#x27;: mykey, &#x27;apiSecret&#x27;: mysecret});
+
+client.<span class="apidocCodeKeywordSpan">getAccounts</span>({}, function(err, accounts) {
+  accounts.forEach(function(acct) {
+    console.log(&#x27;my bal: &#x27; + acct.balance.amount + &#x27; for &#x27; + acct.name);
+  });
+});
+```
+
+**Get Balance from an Account Id**
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.coinbase.Client.prototype.getBuyPrice" id="apidoc.element.coinbase.Client.prototype.getBuyPrice">
+        function <span class="apidocSignatureSpan">coinbase.Client.prototype.</span>getBuyPrice
+        <span class="apidocSignatureSpan">(params, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getBuyPrice = function (params, callback) {
+
+  var currencyPair;
+  if (params.currencyPair) {
+    currencyPair = params.currencyPair;
+  } else if (params.currency) {
+    currencyPair = &#x27;BTC-&#x27; + params.currency;
+  } else {
+    currencyPair = &#x27;BTC-USD&#x27;;
+  }
+  this._getOneHttp({&#x27;path&#x27;: &#x27;prices/&#x27; + currencyPair + &#x27;/buy&#x27;}, callback);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  });
+});
+```
+
+**Checking bitcoin prices**
+
+```javascript
+client.<span class="apidocCodeKeywordSpan">getBuyPrice</span>({&#x27;currencyPair&#x27;: &#x27;BTC-USD&#x27;}, function(err, obj
+) {
+  console.log(&#x27;total amount: &#x27; + obj.data.amount);
+});
+```
+
+**Verifying merchant callback authenticity**
+```javascript
+if (client.verifyCallback(req.raw_body, req.headers[&#x27;CB-SIGNATURE&#x27;])) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.coinbase.Client.prototype.getCheckout" id="apidoc.element.coinbase.Client.prototype.getCheckout">
+        function <span class="apidocSignatureSpan">coinbase.Client.prototype.</span>getCheckout
+        <span class="apidocSignatureSpan">(checkoutId, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getCheckout = function (checkoutId, callback) {
+
+  var opts = {
+    &#x27;path&#x27;     : &#x27;checkouts/&#x27; + checkoutId,
+    &#x27;ObjFunc&#x27;  : Checkout
+  };
+
+  this._getOneHttp(opts, callback);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.coinbase.Client.prototype.getCheckouts" id="apidoc.element.coinbase.Client.prototype.getCheckouts">
+        function <span class="apidocSignatureSpan">coinbase.Client.prototype.</span>getCheckouts
+        <span class="apidocSignatureSpan">(args, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getCheckouts = function (args, callback) {
+
+  var opts = {
+    &#x27;colName&#x27;  : &#x27;checkouts&#x27;,
+    &#x27;ObjFunc&#x27;  : Checkout
+  };
+
+  this._getAllHttp(_.assign(args || {}, opts), callback)
+
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.coinbase.Client.prototype.getCurrencies" id="apidoc.element.coinbase.Client.prototype.getCurrencies">
+        function <span class="apidocSignatureSpan">coinbase.Client.prototype.</span>getCurrencies
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getCurrencies = function (callback) {
+
+  this._getOneHttp({&#x27;path&#x27;: &#x27;currencies&#x27;}, callback);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.coinbase.Client.prototype.getCurrentUser" id="apidoc.element.coinbase.Client.prototype.getCurrentUser">
+        function <span class="apidocSignatureSpan">coinbase.Client.prototype.</span>getCurrentUser
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getCurrentUser = function (callback) {
+
+  var opts = {
+    &#x27;path&#x27;     : &#x27;user&#x27;,
+    &#x27;ObjFunc&#x27;  : User
+  };
+
+  this._getOneHttp(opts, callback);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.coinbase.Client.prototype.getExchangeRates" id="apidoc.element.coinbase.Client.prototype.getExchangeRates">
+        function <span class="apidocSignatureSpan">coinbase.Client.prototype.</span>getExchangeRates
+        <span class="apidocSignatureSpan">(params, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getExchangeRates = function (params, callback) {
+
+  this._getOneHttp({&#x27;path&#x27;: &#x27;exchange-rates&#x27;, &#x27;params&#x27;: params}, callback);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.coinbase.Client.prototype.getHistoricPrices" id="apidoc.element.coinbase.Client.prototype.getHistoricPrices">
+        function <span class="apidocSignatureSpan">coinbase.Client.prototype.</span>getHistoricPrices
+        <span class="apidocSignatureSpan">(params, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getHistoricPrices = function (params, callback) {
+
+  this._getOneHttp({&#x27;path&#x27;: &#x27;prices/historic&#x27;, &#x27;params&#x27;: params} , callback);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.coinbase.Client.prototype.getMerchant" id="apidoc.element.coinbase.Client.prototype.getMerchant">
+        function <span class="apidocSignatureSpan">coinbase.Client.prototype.</span>getMerchant
+        <span class="apidocSignatureSpan">(merchantId, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getMerchant = function (merchantId, callback) {
+
+  var opts = {
+    &#x27;path&#x27;    : &#x27;merchants/&#x27; + merchantId,
+    &#x27;ObjFunc&#x27; : Merchant
+  };
+
+  this._getOneHttp(opts, callback);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.coinbase.Client.prototype.getNotification" id="apidoc.element.coinbase.Client.prototype.getNotification">
+        function <span class="apidocSignatureSpan">coinbase.Client.prototype.</span>getNotification
+        <span class="apidocSignatureSpan">(notificationId, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getNotification = function (notificationId, callback) {
+
+  var opts = {
+    &#x27;path&#x27;     : &#x27;notifications/&#x27; + notificationId,
+    &#x27;ObjFunc&#x27;  : Notification
+  };
+  this._getOneHttp(opts, callback);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.coinbase.Client.prototype.getNotifications" id="apidoc.element.coinbase.Client.prototype.getNotifications">
+        function <span class="apidocSignatureSpan">coinbase.Client.prototype.</span>getNotifications
+        <span class="apidocSignatureSpan">(args, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getNotifications = function (args, callback) {
+
+  var opts = {
+    &#x27;colName&#x27;  : &#x27;notifications&#x27;,
+    &#x27;ObjFunc&#x27;  : Notification
+  };
+
+  this._getAllHttp(_.assign(args || {}, opts), callback)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.coinbase.Client.prototype.getOrder" id="apidoc.element.coinbase.Client.prototype.getOrder">
+        function <span class="apidocSignatureSpan">coinbase.Client.prototype.</span>getOrder
+        <span class="apidocSignatureSpan">(orderId, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getOrder = function (orderId, callback) {
+
+  var opts = {
+    &#x27;path&#x27;     : &#x27;orders/&#x27; + orderId,
+    &#x27;ObjFunc&#x27;  : Order
+  };
+
+  this._getOneHttp(opts, callback);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.coinbase.Client.prototype.getOrders" id="apidoc.element.coinbase.Client.prototype.getOrders">
+        function <span class="apidocSignatureSpan">coinbase.Client.prototype.</span>getOrders
+        <span class="apidocSignatureSpan">(args, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getOrders = function (args, callback) {
+
+  var opts = {
+    &#x27;colName&#x27;  : &#x27;orders&#x27;,
+    &#x27;ObjFunc&#x27;  : Order
+  };
+
+  this._getAllHttp(_.assign(args || {}, opts), callback)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.coinbase.Client.prototype.getPaymentMethod" id="apidoc.element.coinbase.Client.prototype.getPaymentMethod">
+        function <span class="apidocSignatureSpan">coinbase.Client.prototype.</span>getPaymentMethod
+        <span class="apidocSignatureSpan">(methodId, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getPaymentMethod = function (methodId, callback) {
+
+  var opts = {
+    &#x27;path&#x27;     : &#x27;payment-methods/&#x27; + methodId,
+    &#x27;ObjFunc&#x27;  : PaymentMethod
+  };
+
+  this._getOneHttp(opts, callback);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.coinbase.Client.prototype.getPaymentMethods" id="apidoc.element.coinbase.Client.prototype.getPaymentMethods">
+        function <span class="apidocSignatureSpan">coinbase.Client.prototype.</span>getPaymentMethods
+        <span class="apidocSignatureSpan">(args, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getPaymentMethods = function (args, callback) {
+
+  var opts = {
+    &#x27;colName&#x27;  : &#x27;payment-methods&#x27;,
+    &#x27;ObjFunc&#x27;  : PaymentMethod
+  };
+
+  this._getAllHttp(_.assign(args || {}, opts), callback)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.coinbase.Client.prototype.getSellPrice" id="apidoc.element.coinbase.Client.prototype.getSellPrice">
+        function <span class="apidocSignatureSpan">coinbase.Client.prototype.</span>getSellPrice
+        <span class="apidocSignatureSpan">(params, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getSellPrice = function (params, callback) {
+
+  var currencyPair;
+  if (params.currencyPair) {
+    currencyPair = params.currencyPair;
+  } else if (params.currency) {
+    currencyPair = &#x27;BTC-&#x27; + params.currency;
+  } else {
+    currencyPair = &#x27;BTC-USD&#x27;;
+  }
+  this._getOneHttp({&#x27;path&#x27;: &#x27;prices/&#x27; + currencyPair + &#x27;/sell&#x27;}, callback);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.coinbase.Client.prototype.getSpotPrice" id="apidoc.element.coinbase.Client.prototype.getSpotPrice">
+        function <span class="apidocSignatureSpan">coinbase.Client.prototype.</span>getSpotPrice
+        <span class="apidocSignatureSpan">(params, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getSpotPrice = function (params, callback) {
+
+  var currencyPair;
+  if (params.currencyPair) {
+    currencyPair = params.currencyPair;
+  } else if (params.currency) {
+    currencyPair = &#x27;BTC-&#x27; + params.currency;
+  } else {
+    currencyPair = &#x27;BTC-USD&#x27;;
+  }
+  this._getOneHttp({&#x27;path&#x27;: &#x27;prices/&#x27; + currencyPair + &#x27;/spot&#x27;}, callback);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.coinbase.Client.prototype.getTime" id="apidoc.element.coinbase.Client.prototype.getTime">
+        function <span class="apidocSignatureSpan">coinbase.Client.prototype.</span>getTime
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getTime = function (callback) {
+
+  this._getOneHttp({&#x27;path&#x27;: &#x27;time&#x27;}, callback);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.coinbase.Client.prototype.getUser" id="apidoc.element.coinbase.Client.prototype.getUser">
+        function <span class="apidocSignatureSpan">coinbase.Client.prototype.</span>getUser
+        <span class="apidocSignatureSpan">(userId, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getUser = function (userId, callback) {
+
+  var opts = {
+    &#x27;path&#x27;     : &#x27;users/&#x27; + userId,
+    &#x27;ObjFunc&#x27;  : User
+  };
+
+  this._getOneHttp(opts, callback);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.coinbase.Client.prototype.refresh" id="apidoc.element.coinbase.Client.prototype.refresh">
+        function <span class="apidocSignatureSpan">coinbase.Client.prototype.</span>refresh
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">refresh = function (callback) {
+  var self = this;
+  var params = {
+                 &#x27;grant_type&#x27;    : &#x27;refresh_token&#x27;,
+                 &#x27;refresh_token&#x27; : this.refreshToken
+               };
+  var path = this.tokenUri;
+  this._postHttp(path, params, function myPost(err, result) {
+
+    if (err) {
+      err.type = etypes.TokenRefreshError;
+      callback(err, result);
+      return;
+    }
+    self.accessToken = result.access_token;
+    self.refreshToken = result.refresh_token;
+    callback(null, result);
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.coinbase.Client.prototype.toString" id="apidoc.element.coinbase.Client.prototype.toString">
+        function <span class="apidocSignatureSpan">coinbase.Client.prototype.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toString = function () {
+  return &#x22;Coinbase API Client for &#x22; + this.baseApiUri;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.coinbase.Client.prototype.verifyCallback" id="apidoc.element.coinbase.Client.prototype.verifyCallback">
+        function <span class="apidocSignatureSpan">coinbase.Client.prototype.</span>verifyCallback
+        <span class="apidocSignatureSpan">(body, signature)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">verifyCallback = function (body, signature) {
+  var verifier = crypto.createVerify(&#x27;RSA-SHA256&#x27;);
+  verifier.update(body);
+  return verifier.verify(callback_key, signature, &#x27;base64&#x27;);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+client.getBuyPrice({&#x27;currencyPair&#x27;: &#x27;BTC-USD&#x27;}, function(err, obj) {
+  console.log(&#x27;total amount: &#x27; + obj.data.amount);
+});
+```
+
+**Verifying merchant callback authenticity**
+```javascript
+if (client.<span class="apidocCodeKeywordSpan">verifyCallback</span>(req.raw_body, req.headers[&#x27;CB-SIGNATURE&#x27;])) {
+  // Process callback
+}
+```
+
+## Error Handling
+
+Errors are thrown for invalid arguments but are otherwise returned as the
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.coinbase.ClientBase" id="apidoc.module.coinbase.ClientBase">module coinbase.ClientBase</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.coinbase.ClientBase.ClientBase" id="apidoc.element.coinbase.ClientBase.ClientBase">
+        function <span class="apidocSignatureSpan">coinbase.</span>ClientBase
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function ClientBase(opts) {
+
+  if (!(this instanceof ClientBase)) {
+    return new ClientBase(opts);
+  }
+
+  // assign defaults and options to the context
+  assign(this, {
+    baseApiUri: BASE_URI,
+    tokenUri: TOKEN_ENDPOINT_URI,
+    caFile: CERT_STORE,
+    strictSSL: true
+  }, opts);
+
+  // check for the different auth strategies
+  var api = !!(this.apiKey &#x26;&#x26; this.apiSecret)
+  var oauth = !!this.accessToken;
+
+  // XOR
+  if (!(api ^ oauth)) {
+    throw new Error(&#x27;you must either provide an &#x22;accessToken&#x22; or the &#x22;apiKey&#x22; &#x26; &#x22;apiSecret&#x22; parameters&#x27;);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.coinbase.ClientBase.prototype" id="apidoc.module.coinbase.ClientBase.prototype">module coinbase.ClientBase.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.coinbase.ClientBase.prototype._deleteHttp" id="apidoc.element.coinbase.ClientBase.prototype._deleteHttp">
+        function <span class="apidocSignatureSpan">coinbase.ClientBase.prototype.</span>_deleteHttp
+        <span class="apidocSignatureSpan">(path, callback, headers)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_deleteHttp = function (path, callback, headers) {
+  var url = this.baseApiUri + this._setAccessToken(path);
+  request.del(url, this._generateReqOptions(url, path, null, &#x27;DELETE&#x27;, headers),
+  function onDel(err, response, body) {
+    if (!handleHttpError(err, response, callback)) {
+      callback(null, body);
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.coinbase.ClientBase.prototype._generateReqOptions" id="apidoc.element.coinbase.ClientBase.prototype._generateReqOptions">
+        function <span class="apidocSignatureSpan">coinbase.ClientBase.prototype.</span>_generateReqOptions
+        <span class="apidocSignatureSpan">(url, path, body, method, headers)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_generateReqOptions = function (url, path, body, method, headers) {
+
+  var bodyStr = body ? JSON.stringify(body) : &#x27;&#x27;;
+
+  // specify the options
+  var options = {
+    &#x27;url&#x27;: url,
+    &#x27;ca&#x27;: this.caFile,
+    &#x27;strictSSL&#x27;: this.strictSSL,
+    &#x27;body&#x27;: bodyStr,
+    &#x27;method&#x27;: method,
+    &#x27;headers&#x27; : {
+      &#x27;Content-Type&#x27;     : &#x27;application/json&#x27;,
+      &#x27;Accept&#x27;           : &#x27;application/json&#x27;,
+      &#x27;User-Agent&#x27;       : &#x27;coinbase/node/1.0.4&#x27;
+    }
+  };
+
+  // add additional headers when we&#x27;re using the &#x22;api key&#x22; and &#x22;api secret&#x22;
+  if (this.apiSecret &#x26;&#x26; this.apiKey) {
+    var sig = this._generateSignature(path, method, bodyStr);
+
+    // add signature and nonce to the header
+    options.headers = assign(options.headers, {
+      &#x27;CB-ACCESS-SIGN&#x27;: sig.digest,
+      &#x27;CB-ACCESS-TIMESTAMP&#x27;: sig.timestamp,
+      &#x27;CB-ACCESS-KEY&#x27;: this.apiKey,
+      &#x27;CB-VERSION&#x27;: this.version || &#x27;2016-02-18&#x27;
+    })
+  }
+
+  return options;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ClientBase.prototype._getHttp = function(path, args, callback, headers) {
+var params = &#x27;&#x27;;
+if (args &#x26;&#x26; !_.isEmpty(args)) {
+  params = &#x27;?&#x27; + qs.stringify(args);
+}
+
+var url = this.baseApiUri + this._setAccessToken(path + params);
+var opts = this.<span class="apidocCodeKeywordSpan">_generateReqOptions</span>(url, path + params, null, &#x27;GET&#x27;, headers
+);
+
+request.get(opts, function onGet(err, response, body) {
+  if (!handleHttpError(err, response, callback)) {
+    if (!body) {
+      callback(new Error(&#x22;empty response&#x22;), null);
+    } else {
+      var obj = JSON.parse(body);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.coinbase.ClientBase.prototype._generateSignature" id="apidoc.element.coinbase.ClientBase.prototype._generateSignature">
+        function <span class="apidocSignatureSpan">coinbase.ClientBase.prototype.</span>_generateSignature
+        <span class="apidocSignatureSpan">(path, method, bodyStr)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_generateSignature = function (path, method, bodyStr) {
+  var timestamp = Math.floor(Date.now() / 1000);
+  var message = timestamp + method + &#x27;/v2/&#x27; + path + bodyStr;
+  var signature = crypto.createHmac(&#x27;sha256&#x27;, this.apiSecret).update(message).digest(&#x27;hex&#x27;);
+
+  return {
+    &#x27;digest&#x27;: signature,
+    &#x27;timestamp&#x27;: timestamp
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  &#x27;Accept&#x27;           : &#x27;application/json&#x27;,
+  &#x27;User-Agent&#x27;       : &#x27;coinbase/node/1.0.4&#x27;
+}
+  };
+
+  // add additional headers when we&#x27;re using the &#x22;api key&#x22; and &#x22;api secret&#x22;
+  if (this.apiSecret &#x26;&#x26; this.apiKey) {
+var sig = this.<span class="apidocCodeKeywordSpan">_generateSignature</span>(path, method, bodyStr);
+
+// add signature and nonce to the header
+options.headers = assign(options.headers, {
+  &#x27;CB-ACCESS-SIGN&#x27;: sig.digest,
+  &#x27;CB-ACCESS-TIMESTAMP&#x27;: sig.timestamp,
+  &#x27;CB-ACCESS-KEY&#x27;: this.apiKey,
+  &#x27;CB-VERSION&#x27;: this.version || &#x27;2016-02-18&#x27;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.coinbase.ClientBase.prototype._getAllHttp" id="apidoc.element.coinbase.ClientBase.prototype._getAllHttp">
+        function <span class="apidocSignatureSpan">coinbase.ClientBase.prototype.</span>_getAllHttp
+        <span class="apidocSignatureSpan">(opts, callback, headers)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_getAllHttp = function (opts, callback, headers) {
+  var self = this;
+  var args = {}
+  var path;
+  if (this.hasField(opts, &#x27;next_uri&#x27;)) {
+    path = opts.next_uri.replace(&#x27;/v2/&#x27;, &#x27;&#x27;);
+    args = null;
+  } else {
+    path = opts.colName;
+    if (this.hasField(opts, &#x27;starting_after&#x27;)) {
+      args.starting_after = opts.starting_after;
+    }
+    if (this.hasField(opts, &#x27;ending_before&#x27;)) {
+      args.ending_before = opts.ending_before;
+    }
+    if (this.hasField(opts, &#x27;limit&#x27;)) {
+      args.limit = opts.limit;
+    }
+    if (this.hasField(opts, &#x27;order&#x27;)) {
+      args.order = opts.order;
+    }
+  }
+
+  this._getHttp(path, args, function onGet(err, result) {
+    if (!handleError(err, result, callback)) {
+      var objs = [];
+      if (result.data.length !== 0) {
+        var ObjFunc = self._stringToClass(result.data[0].resource);
+        objs = _.map(result.data, function onMap(obj) {
+          return new ObjFunc(self, obj);
+        });
+      }
+      callback(null, objs, result.pagination);
+    }
+  }, headers);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.coinbase.ClientBase.prototype._getHttp" id="apidoc.element.coinbase.ClientBase.prototype._getHttp">
+        function <span class="apidocSignatureSpan">coinbase.ClientBase.prototype.</span>_getHttp
+        <span class="apidocSignatureSpan">(path, args, callback, headers)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_getHttp = function (path, args, callback, headers) {
+  var params = &#x27;&#x27;;
+  if (args &#x26;&#x26; !_.isEmpty(args)) {
+    params = &#x27;?&#x27; + qs.stringify(args);
+  }
+
+  var url = this.baseApiUri + this._setAccessToken(path + params);
+  var opts = this._generateReqOptions(url, path + params, null, &#x27;GET&#x27;, headers);
+
+  request.get(opts, function onGet(err, response, body) {
+    if (!handleHttpError(err, response, callback)) {
+      if (!body) {
+        callback(new Error(&#x22;empty response&#x22;), null);
+      } else {
+        var obj = JSON.parse(body);
+        callback(null, obj);
+      }
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    args.limit = opts.limit;
+  }
+  if (this.hasField(opts, &#x27;order&#x27;)) {
+    args.order = opts.order;
+  }
+}
+
+this.<span class="apidocCodeKeywordSpan">_getHttp</span>(path, args, function onGet(err, result) {
+  if (!handleError(err, result, callback)) {
+    var objs = [];
+    if (result.data.length !== 0) {
+      var ObjFunc = self._stringToClass(result.data[0].resource);
+      objs = _.map(result.data, function onMap(obj) {
+        return new ObjFunc(self, obj);
+      });
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.coinbase.ClientBase.prototype._getOneHttp" id="apidoc.element.coinbase.ClientBase.prototype._getOneHttp">
+        function <span class="apidocSignatureSpan">coinbase.ClientBase.prototype.</span>_getOneHttp
+        <span class="apidocSignatureSpan">(args, callback, headers)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_getOneHttp = function (args, callback, headers) {
+  var self = this;
+  this._getHttp(args.path, args.params, function onGet(err, obj) {
+    if (!handleError(err, obj, callback)) {
+      if (obj.data.resource) {
+        var ObjFunc = self._stringToClass(obj.data.resource);
+        callback(null, new ObjFunc(self, obj.data));
+      } else {
+        callback(null, obj);
+      }
+    }
+  }, headers);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.coinbase.ClientBase.prototype._postHttp" id="apidoc.element.coinbase.ClientBase.prototype._postHttp">
+        function <span class="apidocSignatureSpan">coinbase.ClientBase.prototype.</span>_postHttp
+        <span class="apidocSignatureSpan">(path, body, callback, headers)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_postHttp = function (path, body, callback, headers) {
+
+  var url = this.baseApiUri + this._setAccessToken(path);
+  body = body || {}
+
+  var options = this._generateReqOptions(url, path, body, &#x27;POST&#x27;, headers);
+
+  request.post(options, function onPost(err, response, body) {
+    if (!handleHttpError(err, response, callback)) {
+      if (body) {
+        var obj = JSON.parse(body);
+        callback(null, obj);
+      } else {
+        callback(null, body);
+      }
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+// &#x27;colName&#x27;  : colName,
+// &#x27;params&#x27;   : args
+// }
+//
+ClientBase.prototype._postOneHttp = function(opts, callback, headers) {
+var self = this;
+var body = opts.params;
+this.<span class="apidocCodeKeywordSpan">_postHttp</span>(opts.colName, body, function onPost(err, obj) {
+ if (!handleError(err, obj, callback)) {
+   if (obj.data.resource) {
+     var ObjFunc = self._stringToClass(obj.data.resource);
+     callback(null, new ObjFunc(self, obj.data));
+   } else {
+     callback(null, obj);
+   }
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.coinbase.ClientBase.prototype._postOneHttp" id="apidoc.element.coinbase.ClientBase.prototype._postOneHttp">
+        function <span class="apidocSignatureSpan">coinbase.ClientBase.prototype.</span>_postOneHttp
+        <span class="apidocSignatureSpan">(opts, callback, headers)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_postOneHttp = function (opts, callback, headers) {
+   var self = this;
+   var body = opts.params;
+   this._postHttp(opts.colName, body, function onPost(err, obj) {
+    if (!handleError(err, obj, callback)) {
+      if (obj.data.resource) {
+        var ObjFunc = self._stringToClass(obj.data.resource);
+        callback(null, new ObjFunc(self, obj.data));
+      } else {
+        callback(null, obj);
+      }
+    }
+  }, headers);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.coinbase.ClientBase.prototype._putHttp" id="apidoc.element.coinbase.ClientBase.prototype._putHttp">
+        function <span class="apidocSignatureSpan">coinbase.ClientBase.prototype.</span>_putHttp
+        <span class="apidocSignatureSpan">(path, body, callback, headers)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_putHttp = function (path, body, callback, headers) {
+
+  var url = this.baseApiUri + this._setAccessToken(path);
+
+  var options = this._generateReqOptions(url, path, body, &#x27;PUT&#x27;, headers);
+
+  request.put(options, function onPut(err, response, body) {
+    if (!handleHttpError(err, response, callback)) {
+      if (body) {
+        var obj = JSON.parse(body);
+        callback(null, obj);
+      } else {
+        callback(null, body);
+      }
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.coinbase.ClientBase.prototype._setAccessToken" id="apidoc.element.coinbase.ClientBase.prototype._setAccessToken">
+        function <span class="apidocSignatureSpan">coinbase.ClientBase.prototype.</span>_setAccessToken
+        <span class="apidocSignatureSpan">(path)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_setAccessToken = function (path) {
+
+  // OAuth access token
+  if (this.accessToken) {
+    if (path.indexOf(&#x27;?&#x27;) &#x3e; -1) {
+      return path + &#x27;&#x26;access_token=&#x27; + this.accessToken;
+    }
+    return path + &#x27;?access_token=&#x27; + this.accessToken;
+  }
+  return path
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+ClientBase.prototype._getHttp = function(path, args, callback, headers) {
+var params = &#x27;&#x27;;
+if (args &#x26;&#x26; !_.isEmpty(args)) {
+  params = &#x27;?&#x27; + qs.stringify(args);
+}
+
+var url = this.baseApiUri + this.<span class="apidocCodeKeywordSpan">_setAccessToken</span>(path + params);
+var opts = this._generateReqOptions(url, path + params, null, &#x27;GET&#x27;, headers);
+
+request.get(opts, function onGet(err, response, body) {
+  if (!handleHttpError(err, response, callback)) {
+    if (!body) {
+      callback(new Error(&#x22;empty response&#x22;), null);
+    } else {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.coinbase.ClientBase.prototype._stringToClass" id="apidoc.element.coinbase.ClientBase.prototype._stringToClass">
+        function <span class="apidocSignatureSpan">coinbase.ClientBase.prototype.</span>_stringToClass
+        <span class="apidocSignatureSpan">(name)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_stringToClass = function (name) {
+  return MODELS[name]
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  }
+}
+
+this._getHttp(path, args, function onGet(err, result) {
+  if (!handleError(err, result, callback)) {
+    var objs = [];
+    if (result.data.length !== 0) {
+      var ObjFunc = self.<span class="apidocCodeKeywordSpan">_stringToClass</span>(result.data[0].resource);
+      objs = _.map(result.data, function onMap(obj) {
+        return new ObjFunc(self, obj);
+      });
+    }
+    callback(null, objs, result.pagination);
+  }
+}, headers);
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.coinbase.errorHandler" id="apidoc.module.coinbase.errorHandler">module coinbase.errorHandler</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.coinbase.errorHandler.handleError" id="apidoc.element.coinbase.errorHandler.handleError">
+        function <span class="apidocSignatureSpan">coinbase.errorHandler.</span>handleError
+        <span class="apidocSignatureSpan">(err, obj, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function handleError(err, obj, callback) {
+
+  if (!callback) {throw &#x22;no callback - check method signature&#x22;;}
+  if (err) {
+    callback(err, null);
+    return true;
+  }
+  if (obj.error) {
+    callback(createError(obj.error, {name: &#x27;APIError&#x27;}), null);
+    return true;
+  }
+  if (obj.errors) {
+    callback(createError(obj, {name: &#x27;APIError&#x27;}), null);
+    return true;
+  }
+  if (obj.success !== undefined &#x26;&#x26; obj.success !== true) {
+    callback(createError(obj, {name: &#x27;APIError&#x27;}), null);
+    return true;
+  }
+  return false;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.coinbase.errorHandler.handleHttpError" id="apidoc.element.coinbase.errorHandler.handleHttpError">
+        function <span class="apidocSignatureSpan">coinbase.errorHandler.</span>handleHttpError
+        <span class="apidocSignatureSpan">(err, response, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function handleHttpError(err, response, callback) {
+
+  if (!callback) {
+    throw new Error(&#x22;no callback for http error handler- check method signature&#x22;);
+  }
+
+  if (err) {
+    callback(err, null);
+    return true;
+  }
+  if (!response) {
+    callback(createError(&#x27;no response&#x27;), null);
+    return true;
+  }
+  if (response.statusCode !== 200 &#x26;&#x26;
+      response.statusCode !== 201 &#x26;&#x26;
+      response.statusCode !== 204) {
+    var error;
+    try {
+      var errorBody = _parseError(JSON.parse(response.body));
+      error = createError(response.statusCode,
+                          errorBody.message,
+                          {name: _convertErrorName(errorBody.id)});
+    } catch (ex) {
+      error = createError(response.statusCode, response.body);
+    }
+    callback(error, null);
+    return true;
+  }
+  return false;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.coinbase.model" id="apidoc.module.coinbase.model">module coinbase.model</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.coinbase.model.Account" id="apidoc.element.coinbase.model.Account">
+        function <span class="apidocSignatureSpan">coinbase.model.</span>Account
+        <span class="apidocSignatureSpan">(client, data)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Account(client, data) {
+  if (!(this instanceof Account)) {
+    return new Account(client, data);
+  }
+  AccountBase.call(this, client, data);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.coinbase.model.Address" id="apidoc.element.coinbase.model.Address">
+        function <span class="apidocSignatureSpan">coinbase.model.</span>Address
+        <span class="apidocSignatureSpan">(client, data, account)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Address(client, data, account) {
+  if (!(this instanceof Address)) {
+    return new Address(client, data, account);
+  }
+  BaseModel.call(this, client, data);
+  if (!account) { throw new Error(&#x22;no account arg&#x22;); }
+  if (!account.id) { throw new Error(&#x22;account has no id&#x22;); }
+  this.account = account;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.coinbase.model.Buy" id="apidoc.element.coinbase.model.Buy">
+        function <span class="apidocSignatureSpan">coinbase.model.</span>Buy
+        <span class="apidocSignatureSpan">(client, data, account)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Buy(client, data, account) {
+  if (!(this instanceof Buy)) {
+    return new Buy(client, data, account);
+  }
+  Transfer.call(this, client, data, account);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.coinbase.model.Checkout" id="apidoc.element.coinbase.model.Checkout">
+        function <span class="apidocSignatureSpan">coinbase.model.</span>Checkout
+        <span class="apidocSignatureSpan">(client, data)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Checkout(client, data) {
+  if (!(this instanceof Checkout)) {
+    return new Checkout(client, data);
+  }
+  BaseModel.call(this, client, data);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.coinbase.model.Deposit" id="apidoc.element.coinbase.model.Deposit">
+        function <span class="apidocSignatureSpan">coinbase.model.</span>Deposit
+        <span class="apidocSignatureSpan">(client, data, account)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Deposit(client, data, account) {
+  if (!(this instanceof Deposit)) {
+    return new Deposit(client, data, account);
+  }
+  Transfer.call(this, client, data, account);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.coinbase.model.Merchant" id="apidoc.element.coinbase.model.Merchant">
+        function <span class="apidocSignatureSpan">coinbase.model.</span>Merchant
+        <span class="apidocSignatureSpan">(client, data)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Merchant(client, data) {
+  if (!(this instanceof Merchant)) {
+    return new Merchant(client, data);
+  }
+  BaseModel.call(this, client, data);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.coinbase.model.Notification" id="apidoc.element.coinbase.model.Notification">
+        function <span class="apidocSignatureSpan">coinbase.model.</span>Notification
+        <span class="apidocSignatureSpan">(client, data)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Notification(client, data) {
+  if (!(this instanceof Notification)) {
+    return new Notification(client, data);
+  }
+  BaseModel.call(this, client, data);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.coinbase.model.Order" id="apidoc.element.coinbase.model.Order">
+        function <span class="apidocSignatureSpan">coinbase.model.</span>Order
+        <span class="apidocSignatureSpan">(client, data)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Order(client, data) {
+  if (!(this instanceof Order)) {
+    return new Order(client, data);
+  }
+  BaseModel.call(this, client, data);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.coinbase.model.PaymentMethod" id="apidoc.element.coinbase.model.PaymentMethod">
+        function <span class="apidocSignatureSpan">coinbase.model.</span>PaymentMethod
+        <span class="apidocSignatureSpan">(client, data)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function PaymentMethod(client, data) {
+  if (!(this instanceof PaymentMethod)) {
+    return new PaymentMethod(client, data);
+  }
+  BaseModel.call(this, client, data);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.coinbase.model.Sell" id="apidoc.element.coinbase.model.Sell">
+        function <span class="apidocSignatureSpan">coinbase.model.</span>Sell
+        <span class="apidocSignatureSpan">(client, data, account)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Sell(client, data, account) {
+  if (!(this instanceof Sell)) {
+    return new Sell(client, data, account);
+  }
+  Transfer.call(this, client, data, account);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.coinbase.model.Transaction" id="apidoc.element.coinbase.model.Transaction">
+        function <span class="apidocSignatureSpan">coinbase.model.</span>Transaction
+        <span class="apidocSignatureSpan">(client, data, account)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Transaction(client, data, account) {
+  if (!(this instanceof Transaction)) {
+    return new Transaction(client, data, account);
+  }
+  BaseModel.call(this, client, data);
+  if (!account) { throw new Error(&#x22;no account arg&#x22;); }
+  if (!account.id) { throw new Error(&#x22;account has no id&#x22;); }
+  this.account = account;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.coinbase.model.User" id="apidoc.element.coinbase.model.User">
+        function <span class="apidocSignatureSpan">coinbase.model.</span>User
+        <span class="apidocSignatureSpan">(client, data)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function User(client, data) {
+  if (!(this instanceof User)) {
+    return new User(client, data);
+  }
+  BaseModel.call(this, client, data);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.coinbase.model.Withdrawal" id="apidoc.element.coinbase.model.Withdrawal">
+        function <span class="apidocSignatureSpan">coinbase.model.</span>Withdrawal
+        <span class="apidocSignatureSpan">(client, data, account)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Withdrawal(client, data, account) {
+  if (!(this instanceof Withdrawal)) {
+    return new Withdrawal(client, data, account);
+  }
+  Transfer.call(this, client, data, account);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.coinbase.model.Account" id="apidoc.module.coinbase.model.Account">module coinbase.model.Account</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.coinbase.model.Account.Account" id="apidoc.element.coinbase.model.Account.Account">
+        function <span class="apidocSignatureSpan">coinbase.model.</span>Account
+        <span class="apidocSignatureSpan">(client, data)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Account(client, data) {
+  if (!(this instanceof Account)) {
+    return new Account(client, data);
+  }
+  AccountBase.call(this, client, data);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.coinbase.model.Account.prototype" id="apidoc.module.coinbase.model.Account.prototype">module coinbase.model.Account.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.coinbase.model.Account.prototype.buy" id="apidoc.element.coinbase.model.Account.prototype.buy">
+        function <span class="apidocSignatureSpan">coinbase.model.Account.prototype.</span>buy
+        <span class="apidocSignatureSpan">(args, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">buy = function (args, callback) {
+
+  var opts = {
+    &#x27;colName&#x27;  : &#x27;buys&#x27;,
+    &#x27;ObjFunc&#x27;  : Buy,
+    &#x27;params&#x27;   : args
+  };
+
+  this._postOne(opts, callback)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.coinbase.model.Account.prototype.createAddress" id="apidoc.element.coinbase.model.Account.prototype.createAddress">
+        function <span class="apidocSignatureSpan">coinbase.model.Account.prototype.</span>createAddress
+        <span class="apidocSignatureSpan">(args, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">createAddress = function (args, callback) {
+  var opts = {
+    &#x27;colName&#x27;  : &#x27;addresses&#x27;,
+    &#x27;ObjFunc&#x27;  : Address,
+    &#x27;params&#x27;   : args
+  };
+  this._postOne(opts, callback)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.coinbase.model.Account.prototype.delete" id="apidoc.element.coinbase.model.Account.prototype.delete">
+        function <span class="apidocSignatureSpan">coinbase.model.Account.prototype.</span>delete
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">delete = function (callback) {
+  var path = &#x22;accounts/&#x22; + this.id;
+  this.client._deleteHttp(path, callback);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.coinbase.model.Account.prototype.deposit" id="apidoc.element.coinbase.model.Account.prototype.deposit">
+        function <span class="apidocSignatureSpan">coinbase.model.Account.prototype.</span>deposit
+        <span class="apidocSignatureSpan">(args, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">deposit = function (args, callback) {
+
+  var opts = {
+    &#x27;colName&#x27;  : &#x27;deposits&#x27;,
+    &#x27;ObjFunc&#x27;  : Deposit,
+    &#x27;params&#x27;   : args
+  };
+
+  this._postOne(opts, callback)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.coinbase.model.Account.prototype.getAddress" id="apidoc.element.coinbase.model.Account.prototype.getAddress">
+        function <span class="apidocSignatureSpan">coinbase.model.Account.prototype.</span>getAddress
+        <span class="apidocSignatureSpan">(addressId, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getAddress = function (addressId, callback) {
+  var opts = {
+    &#x27;colName&#x27;  : &#x27;addresses&#x27;,
+    &#x27;ObjFunc&#x27;  : Address,
+    &#x27;id&#x27;       : addressId
+  };
+  this._getOne(opts, callback)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.coinbase.model.Account.prototype.getAddresses" id="apidoc.element.coinbase.model.Account.prototype.getAddresses">
+        function <span class="apidocSignatureSpan">coinbase.model.Account.prototype.</span>getAddresses
+        <span class="apidocSignatureSpan">(args, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getAddresses = function (args, callback) {
+  var opts = {
+    &#x27;colName&#x27;  : &#x27;addresses&#x27;,
+    &#x27;ObjFunc&#x27;  : Address,
+  };
+
+  this._getAll(_.assign(args || {}, opts), callback)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.coinbase.model.Account.prototype.getBuy" id="apidoc.element.coinbase.model.Account.prototype.getBuy">
+        function <span class="apidocSignatureSpan">coinbase.model.Account.prototype.</span>getBuy
+        <span class="apidocSignatureSpan">(buy_id, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getBuy = function (buy_id, callback) {
+
+  var opts = {
+    &#x27;colName&#x27;  : &#x27;buys&#x27;,
+    &#x27;ObjFunc&#x27;  : Buy,
+    &#x27;id&#x27;       : buy_id
+  };
+
+  this._getOne(opts, callback);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.coinbase.model.Account.prototype.getBuys" id="apidoc.element.coinbase.model.Account.prototype.getBuys">
+        function <span class="apidocSignatureSpan">coinbase.model.Account.prototype.</span>getBuys
+        <span class="apidocSignatureSpan">(args, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getBuys = function (args, callback) {
+
+  var opts = {
+    &#x27;colName&#x27;  : &#x27;buys&#x27;,
+    &#x27;ObjFunc&#x27;  : Buy,
+  };
+
+  this._getAll(_.assign(args || {}, opts), callback)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.coinbase.model.Account.prototype.getDeposit" id="apidoc.element.coinbase.model.Account.prototype.getDeposit">
+        function <span class="apidocSignatureSpan">coinbase.model.Account.prototype.</span>getDeposit
+        <span class="apidocSignatureSpan">(deposit_id, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getDeposit = function (deposit_id, callback) {
+
+  var opts = {
+    &#x27;colName&#x27;  : &#x27;deposit&#x27;,
+    &#x27;ObjFunc&#x27;  : Deposit,
+    &#x27;id&#x27;       : deposit_id
+  };
+
+  this._getOne(opts, callback);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.coinbase.model.Account.prototype.getDeposits" id="apidoc.element.coinbase.model.Account.prototype.getDeposits">
+        function <span class="apidocSignatureSpan">coinbase.model.Account.prototype.</span>getDeposits
+        <span class="apidocSignatureSpan">(args, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getDeposits = function (args, callback) {
+
+  var opts = {
+    &#x27;colName&#x27;  : &#x27;deposits&#x27;,
+    &#x27;ObjFunc&#x27;  : Deposit,
+  };
+
+  this._getAll(_.assign(args || {}, opts), callback)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.coinbase.model.Account.prototype.getSell" id="apidoc.element.coinbase.model.Account.prototype.getSell">
+        function <span class="apidocSignatureSpan">coinbase.model.Account.prototype.</span>getSell
+        <span class="apidocSignatureSpan">(sell_id, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getSell = function (sell_id, callback) {
+
+  var opts = {
+    &#x27;colName&#x27;  : &#x27;sells&#x27;,
+    &#x27;ObjFunc&#x27;  : Sell,
+    &#x27;id&#x27;       : sell_id
+  };
+
+  this._getOne(opts, callback);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.coinbase.model.Account.prototype.getSells" id="apidoc.element.coinbase.model.Account.prototype.getSells">
+        function <span class="apidocSignatureSpan">coinbase.model.Account.prototype.</span>getSells
+        <span class="apidocSignatureSpan">(args, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getSells = function (args, callback) {
+
+  var opts = {
+    &#x27;colName&#x27;  : &#x27;sells&#x27;,
+    &#x27;ObjFunc&#x27;  : Sell,
+  };
+
+  this._getAll(_.assign(args || {}, opts), callback)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.coinbase.model.Account.prototype.getTransaction" id="apidoc.element.coinbase.model.Account.prototype.getTransaction">
+        function <span class="apidocSignatureSpan">coinbase.model.Account.prototype.</span>getTransaction
+        <span class="apidocSignatureSpan">(transaction_id, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getTransaction = function (transaction_id, callback) {
+
+  var opts = {
+    &#x27;colName&#x27; : &#x27;transactions&#x27;,
+    &#x27;ObjFunc&#x27; : Transaction,
+    &#x27;id&#x27;      : transaction_id
+  };
+
+  this._getOne(opts, callback);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.coinbase.model.Account.prototype.getTransactions" id="apidoc.element.coinbase.model.Account.prototype.getTransactions">
+        function <span class="apidocSignatureSpan">coinbase.model.Account.prototype.</span>getTransactions
+        <span class="apidocSignatureSpan">(args, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getTransactions = function (args, callback) {
+
+  var opts = {
+    &#x27;colName&#x27;  : &#x27;transactions&#x27;,
+    &#x27;ObjFunc&#x27;  : Transaction,
+  };
+
+  this._getAll(_.assign(args || {}, opts), callback)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  console.log(&#x27;my txn id is: &#x27; + txn.id);
+});
+```
+
+**Listing current transactions**
+
+```javascript
+account.<span class="apidocCodeKeywordSpan">getTransactions</span>(null, function(err, txns) {
+  txns.forEach(function(txn) {
+    console.log(&#x27;my txn status: &#x27; + txn.status);
+  });
+});
+```
+
+**Using pagination**
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.coinbase.model.Account.prototype.getWithdrawal" id="apidoc.element.coinbase.model.Account.prototype.getWithdrawal">
+        function <span class="apidocSignatureSpan">coinbase.model.Account.prototype.</span>getWithdrawal
+        <span class="apidocSignatureSpan">(withdrawal_id, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getWithdrawal = function (withdrawal_id, callback) {
+
+  var opts = {
+    &#x27;colName&#x27;  : &#x27;withdrawals&#x27;,
+    &#x27;ObjFunc&#x27;  : Withdrawal,
+    &#x27;id&#x27;       : withdrawal_id
+  };
+
+  this._getOne(opts, callback);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.coinbase.model.Account.prototype.getWithdrawals" id="apidoc.element.coinbase.model.Account.prototype.getWithdrawals">
+        function <span class="apidocSignatureSpan">coinbase.model.Account.prototype.</span>getWithdrawals
+        <span class="apidocSignatureSpan">(args, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getWithdrawals = function (args, callback) {
+
+  var opts = {
+    &#x27;colName&#x27;  : &#x27;withdrawals&#x27;,
+    &#x27;ObjFunc&#x27;  : Withdrawal,
+  };
+
+  this._getAll(_.assign(args || {}, opts), callback)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.coinbase.model.Account.prototype.requestMoney" id="apidoc.element.coinbase.model.Account.prototype.requestMoney">
+        function <span class="apidocSignatureSpan">coinbase.model.Account.prototype.</span>requestMoney
+        <span class="apidocSignatureSpan">(args, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">requestMoney = function (args, callback) {
+  args.type = &#x27;request&#x27;;
+  this._initTxn(args, callback);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```javascript
+var args = {
+  &#x22;to&#x22;: &#x22;user1@example.com&#x22;,
+  &#x22;amount&#x22;: &#x22;1.234&#x22;,
+  &#x22;currency&#x22;: &#x22;BTC&#x22;,
+  &#x22;description&#x22;: &#x22;Sample transaction for you&#x22;
+};
+account.<span class="apidocCodeKeywordSpan">requestMoney</span>(args, function(err, txn) {
+  console.log(&#x27;my txn id is: &#x27; + txn.id);
+});
+```
+
+**Listing current transactions**
+
+```javascript
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.coinbase.model.Account.prototype.sell" id="apidoc.element.coinbase.model.Account.prototype.sell">
+        function <span class="apidocSignatureSpan">coinbase.model.Account.prototype.</span>sell
+        <span class="apidocSignatureSpan">(args, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">sell = function (args, callback) {
+
+  var opts = {
+    &#x27;colName&#x27;  : &#x27;sells&#x27;,
+    &#x27;ObjFunc&#x27;  : Sell,
+    &#x27;params&#x27;   : args
+  };
+
+  this._postOne(opts, callback)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+**Selling bitcoin**
+
+```javascript
+var args = {
+  &#x22;amount&#x22;: &#x22;12&#x22;,
+  &#x22;currency&#x22;: &#x22;BTC&#x22;
+};
+account.<span class="apidocCodeKeywordSpan">sell</span>(args, function(err, xfer) {
+  console.log(&#x27;my xfer id is: &#x27; + xfer.id);
+});
+```
+
+**Sending bitcoin**
+
+```javascript
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.coinbase.model.Account.prototype.sendMoney" id="apidoc.element.coinbase.model.Account.prototype.sendMoney">
+        function <span class="apidocSignatureSpan">coinbase.model.Account.prototype.</span>sendMoney
+        <span class="apidocSignatureSpan">(args, callback, twoFactorAuth)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">sendMoney = function (args, callback, twoFactorAuth) {
+
+  var tfa = twoFactorAuth ? {&#x27;CB-2FA-Token&#x27;: twoFactorAuth} : null;
+  args.type = &#x27;send&#x27;;
+
+  this._initTxn(args, callback, tfa);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```javascript
+var args = {
+  &#x22;to&#x22;: &#x22;user1@example.com&#x22;,
+  &#x22;amount&#x22;: &#x22;1.234&#x22;,
+  &#x22;currency&#x22;: &#x22;BTC&#x22;,
+  &#x22;description&#x22;: &#x22;Sample transaction for you&#x22;
+};
+account.<span class="apidocCodeKeywordSpan">sendMoney</span>(args, function(err, txn) {
+  console.log(&#x27;my txn id is: &#x27; + txn.id);
+});
+```
+
+**Requesting bitcoin**
+
+```javascript
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.coinbase.model.Account.prototype.setPrimary" id="apidoc.element.coinbase.model.Account.prototype.setPrimary">
+        function <span class="apidocSignatureSpan">coinbase.model.Account.prototype.</span>setPrimary
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setPrimary = function (callback) {
+  var path = &#x22;accounts/&#x22; + this.id + &#x22;/primary&#x22;;
+  this.client._postHttp(path, null, callback);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.coinbase.model.Account.prototype.transferMoney" id="apidoc.element.coinbase.model.Account.prototype.transferMoney">
+        function <span class="apidocSignatureSpan">coinbase.model.Account.prototype.</span>transferMoney
+        <span class="apidocSignatureSpan">(args, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">transferMoney = function (args, callback) {
+  args.type = &#x27;transfer&#x27;;
+  this._initTxn(args, callback);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.coinbase.model.Account.prototype.update" id="apidoc.element.coinbase.model.Account.prototype.update">
+        function <span class="apidocSignatureSpan">coinbase.model.Account.prototype.</span>update
+        <span class="apidocSignatureSpan">(args, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">update = function (args, callback) {
+  var self = this;
+  var path = &#x22;accounts/&#x22; + this.id;
+  this.client._putHttp(path, args, function myPut(err, result) {
+    if (err) {
+      callback(err, null);
+      return;
+    }
+    var account = new Account(self.client, result.data);
+    callback(null, account);
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  }
+  return path
+};
+
+ClientBase.prototype._generateSignature = function(path, method, bodyStr) {
+  var timestamp = Math.floor(Date.now() / 1000);
+  var message = timestamp + method + &#x27;/v2/&#x27; + path + bodyStr;
+  var signature = crypto.createHmac(&#x27;sha256&#x27;, this.apiSecret).<span class="apidocCodeKeywordSpan">update</span>(message
+).digest(&#x27;hex&#x27;);
+
+  return {
+    &#x27;digest&#x27;: signature,
+    &#x27;timestamp&#x27;: timestamp
+  };
+};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.coinbase.model.Account.prototype.withdraw" id="apidoc.element.coinbase.model.Account.prototype.withdraw">
+        function <span class="apidocSignatureSpan">coinbase.model.Account.prototype.</span>withdraw
+        <span class="apidocSignatureSpan">(args, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">withdraw = function (args, callback) {
+
+  var opts = {
+    &#x27;colName&#x27;  : &#x27;withdrawals&#x27;,
+    &#x27;ObjFunc&#x27;  : Withdrawal,
+    &#x27;params&#x27;   : args
+  };
+
+  this._postOne(opts, callback)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.coinbase.model.Address" id="apidoc.module.coinbase.model.Address">module coinbase.model.Address</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.coinbase.model.Address.Address" id="apidoc.element.coinbase.model.Address.Address">
+        function <span class="apidocSignatureSpan">coinbase.model.</span>Address
+        <span class="apidocSignatureSpan">(client, data, account)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Address(client, data, account) {
+  if (!(this instanceof Address)) {
+    return new Address(client, data, account);
+  }
+  BaseModel.call(this, client, data);
+  if (!account) { throw new Error(&#x22;no account arg&#x22;); }
+  if (!account.id) { throw new Error(&#x22;account has no id&#x22;); }
+  this.account = account;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.coinbase.model.Address.prototype" id="apidoc.module.coinbase.model.Address.prototype">module coinbase.model.Address.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.coinbase.model.Address.prototype.getTransactions" id="apidoc.element.coinbase.model.Address.prototype.getTransactions">
+        function <span class="apidocSignatureSpan">coinbase.model.Address.prototype.</span>getTransactions
+        <span class="apidocSignatureSpan">(args, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getTransactions = function (args, callback) {
+  var opts = {
+    &#x27;colName&#x27;  : &#x27;addresses/&#x27; + this.id + &#x27;/transactions&#x27;,
+    &#x27;ObjFunc&#x27;  : Transaction,
+  };
+
+  this.account._getAll(_.assign(args || {}, opts), callback)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  console.log(&#x27;my txn id is: &#x27; + txn.id);
+});
+```
+
+**Listing current transactions**
+
+```javascript
+account.<span class="apidocCodeKeywordSpan">getTransactions</span>(null, function(err, txns) {
+  txns.forEach(function(txn) {
+    console.log(&#x27;my txn status: &#x27; + txn.status);
+  });
+});
+```
+
+**Using pagination**
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.coinbase.model.Buy" id="apidoc.module.coinbase.model.Buy">module coinbase.model.Buy</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.coinbase.model.Buy.Buy" id="apidoc.element.coinbase.model.Buy.Buy">
+        function <span class="apidocSignatureSpan">coinbase.model.</span>Buy
+        <span class="apidocSignatureSpan">(client, data, account)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Buy(client, data, account) {
+  if (!(this instanceof Buy)) {
+    return new Buy(client, data, account);
+  }
+  Transfer.call(this, client, data, account);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.coinbase.model.Buy.prototype" id="apidoc.module.coinbase.model.Buy.prototype">module coinbase.model.Buy.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.coinbase.model.Buy.prototype.commit" id="apidoc.element.coinbase.model.Buy.prototype.commit">
+        function <span class="apidocSignatureSpan">coinbase.model.Buy.prototype.</span>commit
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">commit = function (callback) {
+
+  var opts = {
+    &#x27;colName&#x27; : &#x27;buys&#x27;,
+    &#x27;ObjFunc&#x27; : Buy
+  };
+
+  this._commit(opts, callback);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.coinbase.model.Checkout" id="apidoc.module.coinbase.model.Checkout">module coinbase.model.Checkout</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.coinbase.model.Checkout.Checkout" id="apidoc.element.coinbase.model.Checkout.Checkout">
+        function <span class="apidocSignatureSpan">coinbase.model.</span>Checkout
+        <span class="apidocSignatureSpan">(client, data)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Checkout(client, data) {
+  if (!(this instanceof Checkout)) {
+    return new Checkout(client, data);
+  }
+  BaseModel.call(this, client, data);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.coinbase.model.Checkout.prototype" id="apidoc.module.coinbase.model.Checkout.prototype">module coinbase.model.Checkout.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.coinbase.model.Checkout.prototype.createOrder" id="apidoc.element.coinbase.model.Checkout.prototype.createOrder">
+        function <span class="apidocSignatureSpan">coinbase.model.Checkout.prototype.</span>createOrder
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">createOrder = function (callback) {
+
+  var opts = {
+    &#x27;colName&#x27;  : &#x27;checkouts/&#x27; + this.id + &#x27;/orders&#x27;,
+    &#x27;ObjFunc&#x27; : Order,
+  };
+
+  this.client._postOneHttp(opts, callback);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.coinbase.model.Checkout.prototype.getOrders" id="apidoc.element.coinbase.model.Checkout.prototype.getOrders">
+        function <span class="apidocSignatureSpan">coinbase.model.Checkout.prototype.</span>getOrders
+        <span class="apidocSignatureSpan">(args, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getOrders = function (args, callback) {
+
+  var opts = {
+    &#x27;colName&#x27;  : &#x27;checkouts/&#x27; + this.id + &#x27;/orders&#x27;,
+    &#x27;ObjFunc&#x27;  : Order
+  };
+
+  this.client._getAllHttp(_.assign(args || {}, opts), callback)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.coinbase.model.Deposit" id="apidoc.module.coinbase.model.Deposit">module coinbase.model.Deposit</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.coinbase.model.Deposit.Deposit" id="apidoc.element.coinbase.model.Deposit.Deposit">
+        function <span class="apidocSignatureSpan">coinbase.model.</span>Deposit
+        <span class="apidocSignatureSpan">(client, data, account)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Deposit(client, data, account) {
+  if (!(this instanceof Deposit)) {
+    return new Deposit(client, data, account);
+  }
+  Transfer.call(this, client, data, account);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.coinbase.model.Deposit.prototype" id="apidoc.module.coinbase.model.Deposit.prototype">module coinbase.model.Deposit.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.coinbase.model.Deposit.prototype.commit" id="apidoc.element.coinbase.model.Deposit.prototype.commit">
+        function <span class="apidocSignatureSpan">coinbase.model.Deposit.prototype.</span>commit
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">commit = function (callback) {
+
+  var opts = {
+    &#x27;colName&#x27; : &#x27;deposits&#x27;,
+    &#x27;ObjFunc&#x27; : Deposit
+  };
+
+  this._commit(opts, callback);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.coinbase.model.Order" id="apidoc.module.coinbase.model.Order">module coinbase.model.Order</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.coinbase.model.Order.Order" id="apidoc.element.coinbase.model.Order.Order">
+        function <span class="apidocSignatureSpan">coinbase.model.</span>Order
+        <span class="apidocSignatureSpan">(client, data)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Order(client, data) {
+  if (!(this instanceof Order)) {
+    return new Order(client, data);
+  }
+  BaseModel.call(this, client, data);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.coinbase.model.Order.prototype" id="apidoc.module.coinbase.model.Order.prototype">module coinbase.model.Order.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.coinbase.model.Order.prototype.refund" id="apidoc.element.coinbase.model.Order.prototype.refund">
+        function <span class="apidocSignatureSpan">coinbase.model.Order.prototype.</span>refund
+        <span class="apidocSignatureSpan">(args, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">refund = function (args, callback) {
+  var self = this;
+  if (!self.client) {throw &#x22;no client&#x22;;}
+  if (!self.id) {
+    callback(new Error(&#x22;no order id&#x22;), null);
+    return;
+  }
+
+  var path = &#x27;orders/&#x27; + self.id + &#x27;/refund&#x27;;
+
+  self.client._postHttp(path, args, function onPost(err, result) {
+    if (!handleError(err, result, callback)) {
+      var order = new Order(self.client, result.data);
+      callback(null, order);
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.coinbase.model.Sell" id="apidoc.module.coinbase.model.Sell">module coinbase.model.Sell</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.coinbase.model.Sell.Sell" id="apidoc.element.coinbase.model.Sell.Sell">
+        function <span class="apidocSignatureSpan">coinbase.model.</span>Sell
+        <span class="apidocSignatureSpan">(client, data, account)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Sell(client, data, account) {
+  if (!(this instanceof Sell)) {
+    return new Sell(client, data, account);
+  }
+  Transfer.call(this, client, data, account);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.coinbase.model.Sell.prototype" id="apidoc.module.coinbase.model.Sell.prototype">module coinbase.model.Sell.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.coinbase.model.Sell.prototype.commit" id="apidoc.element.coinbase.model.Sell.prototype.commit">
+        function <span class="apidocSignatureSpan">coinbase.model.Sell.prototype.</span>commit
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">commit = function (callback) {
+
+  var opts = {
+    &#x27;colName&#x27; : &#x27;sells&#x27;,
+    &#x27;ObjFunc&#x27; : Sell
+  };
+
+  this._commit(opts, callback);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.coinbase.model.Transaction" id="apidoc.module.coinbase.model.Transaction">module coinbase.model.Transaction</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.coinbase.model.Transaction.Transaction" id="apidoc.element.coinbase.model.Transaction.Transaction">
+        function <span class="apidocSignatureSpan">coinbase.model.</span>Transaction
+        <span class="apidocSignatureSpan">(client, data, account)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Transaction(client, data, account) {
+  if (!(this instanceof Transaction)) {
+    return new Transaction(client, data, account);
+  }
+  BaseModel.call(this, client, data);
+  if (!account) { throw new Error(&#x22;no account arg&#x22;); }
+  if (!account.id) { throw new Error(&#x22;account has no id&#x22;); }
+  this.account = account;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.coinbase.model.Transaction.prototype" id="apidoc.module.coinbase.model.Transaction.prototype">module coinbase.model.Transaction.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.coinbase.model.Transaction.prototype.cancel" id="apidoc.element.coinbase.model.Transaction.prototype.cancel">
+        function <span class="apidocSignatureSpan">coinbase.model.Transaction.prototype.</span>cancel
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">cancel = function (callback) {
+  var self = this;
+  if (self.type !== &#x27;request&#x27;) {
+    throw &#x22;Can only cancel &#x27;request&#x27; transactions&#x22;;
+  }
+
+  var path = &#x27;accounts/&#x27; + self.account.id +  &#x27;/transactions/&#x27; + self.id;
+
+  self.client._deleteHttp(path, function onDel(err, result) {
+    if (!handleError(err, result, callback)) {
+      callback(null, result);
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.coinbase.model.Transaction.prototype.complete" id="apidoc.element.coinbase.model.Transaction.prototype.complete">
+        function <span class="apidocSignatureSpan">coinbase.model.Transaction.prototype.</span>complete
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">complete = function (callback) {
+  var self = this;
+  if (self.type !== &#x27;request&#x27;) {
+    throw &#x22;Can only complete &#x27;request&#x27; transactions&#x22;;
+  }
+
+  var path = &#x27;accounts/&#x27; + self.account.id +  &#x27;/transactions/&#x27; + self.id + &#x27;/complete&#x27;;
+
+  self.client._postHttp(path, null, function onPut(err, result) {
+    if (!handleError(err, result, callback)) {
+      callback(null, new Transaction(self.client, result.data, self.account));
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.coinbase.model.Transaction.prototype.resend" id="apidoc.element.coinbase.model.Transaction.prototype.resend">
+        function <span class="apidocSignatureSpan">coinbase.model.Transaction.prototype.</span>resend
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">resend = function (callback) {
+  var self = this;
+  if (self.type !== &#x27;request&#x27;) {
+    throw &#x22;Can only resend &#x27;request&#x27; transactions&#x22;;
+  }
+
+  var path = &#x27;accounts/&#x27; + self.account.id +  &#x27;/transactions/&#x27; + self.id + &#x27;/resend&#x27;;
+
+  self.client._postHttp(path, null, function onPut(err, result) {
+    if (!handleError(err, result, callback)) {
+      callback(null, result);
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.coinbase.model.User" id="apidoc.module.coinbase.model.User">module coinbase.model.User</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.coinbase.model.User.User" id="apidoc.element.coinbase.model.User.User">
+        function <span class="apidocSignatureSpan">coinbase.model.</span>User
+        <span class="apidocSignatureSpan">(client, data)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function User(client, data) {
+  if (!(this instanceof User)) {
+    return new User(client, data);
+  }
+  BaseModel.call(this, client, data);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.coinbase.model.User.prototype" id="apidoc.module.coinbase.model.User.prototype">module coinbase.model.User.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.coinbase.model.User.prototype.showAuth" id="apidoc.element.coinbase.model.User.prototype.showAuth">
+        function <span class="apidocSignatureSpan">coinbase.model.User.prototype.</span>showAuth
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">showAuth = function (callback) {
+  var self = this;
+  if (!self.client) {throw &#x22;no client&#x22;;}
+  if (!self.id) {
+    callback(new Error(&#x22;no user id&#x22;), null);
+    return;
+  }
+
+  var path = &#x27;user/auth&#x27;;
+
+  self.client._getHttp(path, null, function onGet(err, result) {
+    if (!handleError(err, result, callback)) {
+      callback(null, result.data);
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.coinbase.model.User.prototype.update" id="apidoc.element.coinbase.model.User.prototype.update">
+        function <span class="apidocSignatureSpan">coinbase.model.User.prototype.</span>update
+        <span class="apidocSignatureSpan">(args, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">update = function (args, callback) {
+  var self = this;
+  if (!self.client) {throw &#x22;no client&#x22;;}
+  if (!self.id) {
+    callback(new Error(&#x22;no user id&#x22;), null);
+    return;
+  }
+
+  var path = &#x27;user&#x27;;
+
+  self.client._putHttp(path, args, function onPut(err, result) {
+    if (!handleError(err, result, callback)) {
+      callback(null, new User(self.client, result.data));
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  }
+  return path
+};
+
+ClientBase.prototype._generateSignature = function(path, method, bodyStr) {
+  var timestamp = Math.floor(Date.now() / 1000);
+  var message = timestamp + method + &#x27;/v2/&#x27; + path + bodyStr;
+  var signature = crypto.createHmac(&#x27;sha256&#x27;, this.apiSecret).<span class="apidocCodeKeywordSpan">update</span>(message
+).digest(&#x27;hex&#x27;);
+
+  return {
+    &#x27;digest&#x27;: signature,
+    &#x27;timestamp&#x27;: timestamp
+  };
+};
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.coinbase.model.Withdrawal" id="apidoc.module.coinbase.model.Withdrawal">module coinbase.model.Withdrawal</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.coinbase.model.Withdrawal.Withdrawal" id="apidoc.element.coinbase.model.Withdrawal.Withdrawal">
+        function <span class="apidocSignatureSpan">coinbase.model.</span>Withdrawal
+        <span class="apidocSignatureSpan">(client, data, account)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Withdrawal(client, data, account) {
+  if (!(this instanceof Withdrawal)) {
+    return new Withdrawal(client, data, account);
+  }
+  Transfer.call(this, client, data, account);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.coinbase.model.Withdrawal.prototype" id="apidoc.module.coinbase.model.Withdrawal.prototype">module coinbase.model.Withdrawal.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.coinbase.model.Withdrawal.prototype.commit" id="apidoc.element.coinbase.model.Withdrawal.prototype.commit">
+        function <span class="apidocSignatureSpan">coinbase.model.Withdrawal.prototype.</span>commit
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">commit = function (callback) {
+
+  var opts = {
+    &#x27;colName&#x27; : &#x27;withdrawals&#x27;,
+    &#x27;ObjFunc&#x27; : Withdrawal
+  };
+
+  this._commit(opts, callback);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
