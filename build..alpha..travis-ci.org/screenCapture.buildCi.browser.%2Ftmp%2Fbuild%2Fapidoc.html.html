@@ -56,6 +56,15 @@
 
         <li>
 
+            <a class="apidocElementLiA" href="#apidoc.element.coinbase.AccountBase">
+            function <span class="apidocSignatureSpan">coinbase.</span>AccountBase
+            <span class="apidocSignatureSpan">(client, data)</span>
+            </a>
+
+        </li>
+
+        <li>
+
             <a class="apidocElementLiA" href="#apidoc.element.coinbase.Base">
             function <span class="apidocSignatureSpan">coinbase.</span>Base
             <span class="apidocSignatureSpan">()</span>
@@ -77,6 +86,15 @@
             <a class="apidocElementLiA" href="#apidoc.element.coinbase.ClientBase">
             function <span class="apidocSignatureSpan">coinbase.</span>ClientBase
             <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coinbase.Transfer">
+            function <span class="apidocSignatureSpan">coinbase.</span>Transfer
+            <span class="apidocSignatureSpan">(client, data, account)</span>
             </a>
 
         </li>
@@ -173,6 +191,12 @@
 
         <li>
 
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">coinbase.</span>AccountBase.prototype</span>
+
+        </li>
+
+        <li>
+
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">coinbase.</span>Base.prototype</span>
 
         </li>
@@ -186,6 +210,12 @@
         <li>
 
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">coinbase.</span>ClientBase.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">coinbase.</span>Transfer.prototype</span>
 
         </li>
 
@@ -258,6 +288,59 @@
         <li>
 
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">coinbase.</span>model.Withdrawal.prototype</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.coinbase.AccountBase">module coinbase.AccountBase</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coinbase.AccountBase.AccountBase">
+            function <span class="apidocSignatureSpan">coinbase.</span>AccountBase
+            <span class="apidocSignatureSpan">(client, data)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.coinbase.AccountBase.prototype">module coinbase.AccountBase.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coinbase.AccountBase.prototype._getAll">
+            function <span class="apidocSignatureSpan">coinbase.AccountBase.prototype.</span>_getAll
+            <span class="apidocSignatureSpan">(opts, callback, headers)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coinbase.AccountBase.prototype._getOne">
+            function <span class="apidocSignatureSpan">coinbase.AccountBase.prototype.</span>_getOne
+            <span class="apidocSignatureSpan">(opts, callback, headers)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coinbase.AccountBase.prototype._initTxn">
+            function <span class="apidocSignatureSpan">coinbase.AccountBase.prototype.</span>_initTxn
+            <span class="apidocSignatureSpan">(args, callback, headers)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coinbase.AccountBase.prototype._postOne">
+            function <span class="apidocSignatureSpan">coinbase.AccountBase.prototype.</span>_postOne
+            <span class="apidocSignatureSpan">(opts, callback, headers)</span>
+            </a>
 
         </li>
 
@@ -677,6 +760,32 @@
             <a class="apidocElementLiA" href="#apidoc.element.coinbase.ClientBase.prototype._stringToClass">
             function <span class="apidocSignatureSpan">coinbase.ClientBase.prototype.</span>_stringToClass
             <span class="apidocSignatureSpan">(name)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.coinbase.Transfer">module coinbase.Transfer</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coinbase.Transfer.Transfer">
+            function <span class="apidocSignatureSpan">coinbase.</span>Transfer
+            <span class="apidocSignatureSpan">(client, data, account)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.coinbase.Transfer.prototype">module coinbase.Transfer.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coinbase.Transfer.prototype._commit">
+            function <span class="apidocSignatureSpan">coinbase.Transfer.prototype.</span>_commit
+            <span class="apidocSignatureSpan">(opts, callback)</span>
             </a>
 
         </li>
@@ -1327,6 +1436,24 @@
 
 
     <h2>
+        <a href="#apidoc.element.coinbase.AccountBase" id="apidoc.element.coinbase.AccountBase">
+        function <span class="apidocSignatureSpan">coinbase.</span>AccountBase
+        <span class="apidocSignatureSpan">(client, data)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function AccountBase(client, data) {
+  if (!(this instanceof AccountBase)) {
+    return new AccountBase(client, data);
+  }
+  BaseModel.call(this, client, data);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
         <a href="#apidoc.element.coinbase.Base" id="apidoc.element.coinbase.Base">
         function <span class="apidocSignatureSpan">coinbase.</span>Base
         <span class="apidocSignatureSpan">()</span>
@@ -1412,6 +1539,27 @@ client.getAccounts({}, function(err, accounts) {
   if (!(api ^ oauth)) {
     throw new Error('you must either provide an "accessToken" or the "apiKey" &amp; "apiSecret" parameters');
   }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.coinbase.Transfer" id="apidoc.element.coinbase.Transfer">
+        function <span class="apidocSignatureSpan">coinbase.</span>Transfer
+        <span class="apidocSignatureSpan">(client, data, account)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Transfer(client, data, account) {
+  if (!(this instanceof Transfer)) {
+    return new Transfer(client, data, account);
+  }
+  BaseModel.call(this, client, data);
+  if (!account) { throw new Error("no account arg"); }
+  if (!account.id) { throw new Error("account has no id"); }
+  this.account = account;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -1633,6 +1781,216 @@ client.getAccounts({}, function(err, accounts) {
 
 
 
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.coinbase.AccountBase" id="apidoc.module.coinbase.AccountBase">module coinbase.AccountBase</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.coinbase.AccountBase.AccountBase" id="apidoc.element.coinbase.AccountBase.AccountBase">
+        function <span class="apidocSignatureSpan">coinbase.</span>AccountBase
+        <span class="apidocSignatureSpan">(client, data)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function AccountBase(client, data) {
+  if (!(this instanceof AccountBase)) {
+    return new AccountBase(client, data);
+  }
+  BaseModel.call(this, client, data);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.coinbase.AccountBase.prototype" id="apidoc.module.coinbase.AccountBase.prototype">module coinbase.AccountBase.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.coinbase.AccountBase.prototype._getAll" id="apidoc.element.coinbase.AccountBase.prototype._getAll">
+        function <span class="apidocSignatureSpan">coinbase.AccountBase.prototype.</span>_getAll
+        <span class="apidocSignatureSpan">(opts, callback, headers)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_getAll = function (opts, callback, headers) {
+  var self = this;
+  var args = {};
+  var path;
+  if (this.hasField(opts, 'next_uri')) {
+    path = opts.next_uri.replace('/v2/', '');
+    args = null;
+  } else {
+    path = 'accounts/' + this.id + '/' + opts.colName;
+    if (this.hasField(opts, 'starting_after')) {
+      args.starting_after = opts.starting_after;
+    }
+    if (this.hasField(opts, 'ending_before')) {
+      args.ending_before = opts.ending_before;
+    }
+    if (this.hasField(opts, 'limit')) {
+      args.limit = opts.limit;
+    }
+    if (this.hasField(opts, 'order')) {
+      args.order = opts.order;
+    }
+  }
+
+  this.client._getHttp(path, args, function onGet(err, result) {
+    if (!handleError(err, result, callback)) {
+      if (result.data.length &gt; 0) {
+        var ObjFunc = self.client._stringToClass(result.data[0].resource);
+      }
+      var objs = _.map(result.data, function onMap(obj) {
+        return new ObjFunc(self.client, obj, self);
+      });
+      callback(null, objs, result.pagination);
+    }
+  }, headers);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+// };
+Account.prototype.getAddresses = function(args, callback) {
+var opts = {
+  'colName'  : 'addresses',
+  'ObjFunc'  : Address,
+};
+
+this.<span class="apidocCodeKeywordSpan">_getAll</span>(_.assign(args || {}, opts), callback)
+};
+
+Account.prototype.getAddress = function(addressId, callback) {
+var opts = {
+  'colName'  : 'addresses',
+  'ObjFunc'  : Address,
+  'id'       : addressId
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.coinbase.AccountBase.prototype._getOne" id="apidoc.element.coinbase.AccountBase.prototype._getOne">
+        function <span class="apidocSignatureSpan">coinbase.AccountBase.prototype.</span>_getOne
+        <span class="apidocSignatureSpan">(opts, callback, headers)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_getOne = function (opts, callback, headers) {
+  var self = this;
+  var path = 'accounts/' + this.id + '/' + opts.colName + '/' + opts.id;
+  this.client._getHttp(path, null, function onGet(err, obj) {
+    if (!handleError(err, obj, callback)) {
+      var ObjFunc = self.client._stringToClass(obj.data.resource);
+      callback(null, new ObjFunc(self.client, obj.data, self));
+    }
+  }, headers);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+Account.prototype.getAddress = function(addressId, callback) {
+  var opts = {
+    'colName'  : 'addresses',
+    'ObjFunc'  : Address,
+    'id'       : addressId
+  };
+  this.<span class="apidocCodeKeywordSpan">_getOne</span>(opts, callback)
+};
+
+// ```
+// args = {
+//   'name': address label, (optional)
+//   'callback_url': callback_url (optional)
+// };
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.coinbase.AccountBase.prototype._initTxn" id="apidoc.element.coinbase.AccountBase.prototype._initTxn">
+        function <span class="apidocSignatureSpan">coinbase.AccountBase.prototype.</span>_initTxn
+        <span class="apidocSignatureSpan">(args, callback, headers)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_initTxn = function (args, callback, headers) {
+  var self = this;
+  var path = 'accounts/' + this.id + "/transactions";
+
+  this.client._postHttp(path, args, function onPost(err, obj) {
+      if (!handleError(err, obj, callback)) {
+        var txn = new Transaction(self.client, obj.data, self);
+        callback(null, txn);
+      }
+    }, headers);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+//   'amount'      : amount,
+//   'currency'    : currency,
+//   'description' : notes
+// };
+
+Account.prototype.transferMoney = function(args, callback) {
+  args.type = 'transfer';
+  this.<span class="apidocCodeKeywordSpan">_initTxn</span>(args, callback);
+};
+
+//```
+// args = {
+//   'to'                 : bitcoin address or email,
+//   'amount'             : amount,
+//   'currency'           : currency,
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.coinbase.AccountBase.prototype._postOne" id="apidoc.element.coinbase.AccountBase.prototype._postOne">
+        function <span class="apidocSignatureSpan">coinbase.AccountBase.prototype.</span>_postOne
+        <span class="apidocSignatureSpan">(opts, callback, headers)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_postOne = function (opts, callback, headers) {
+  var self = this;
+  var path = 'accounts/' + this.id + '/' + opts.colName;
+  this.client._postHttp(path, opts.params, function onPost(err, obj) {
+    if (!handleError(err, obj, callback)) {
+      var ObjFunc = self.client._stringToClass(obj.data.resource);
+      callback(null, new ObjFunc(self.client, obj.data, self));
+    }
+  }, headers);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+// ```
+Account.prototype.createAddress = function(args, callback) {
+var opts = {
+  'colName'  : 'addresses',
+  'ObjFunc'  : Address,
+  'params'   : args
+};
+this.<span class="apidocCodeKeywordSpan">_postOne</span>(opts, callback)
+};
+
+Account.prototype.getTransactions = function(args, callback) {
+
+var opts = {
+  'colName'  : 'transactions',
+  'ObjFunc'  : Transaction,
+...</pre></li>
+    </ul>
+
+
 </div>
 
 <div class="apidocSectionDiv">
@@ -1836,7 +2194,22 @@ client.getAccounts({}, function(err, accounts) {
 
   this._postOneHttp(opts, callback);
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  });
+});
+
+it('should create account', function() {
+  var args = {
+    "name": na.NEW_ACCOUNT_NAME_1
+  };
+  client.<span class="apidocCodeKeywordSpan">createAccount</span>(args, function(err, account) {
+    assert.equal(err, null, err);
+    assert(account, 'no account');
+    assert(account.name, 'no name');
+    assert.equal(account.name, na.NEW_ACCOUNT_NAME_1, 'wrong account name');
+  });
+});
+...</pre></li>
     </ul>
 
 
@@ -1880,7 +2253,23 @@ client.getAccounts({}, function(err, accounts) {
 
   this._postOneHttp(opts, callback);
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  });
+});
+
+it('should create order', function() {
+  client.getCheckout(na.GET_CHECKOUT_RESP.data.id, function(err, checkout) {
+    assert.equal(err, null, err);
+    assert(checkout);
+    checkout.<span class="apidocCodeKeywordSpan">createOrder</span>(function(err, order) {
+      assert.equal(err, null, err);
+      assert(order);
+      assert.equal(order.id, na.CREATE_ORDER_RESP.data.id);
+    });
+  });
+
+});
+...</pre></li>
     </ul>
 
 
@@ -2015,7 +2404,24 @@ if (client.verifyCallback(req.raw_body, req.headers['CB-SIGNATURE'])) {
 
   this._getOneHttp(opts, callback);
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  });
+
+  describe('checkout methods', function() {
+
+    var client = new Client({'apiKey': 'mykey', 'apiSecret': 'mysecret', 'baseApiUri
+': na.TEST_BASE_URI});
+
+    it('should get orders', function() {
+      client.<span class="apidocCodeKeywordSpan">getCheckout</span>(na.GET_CHECKOUT_RESP.data.code, function(err, checkout) {
+assert.equal(err, null, err);
+assert(checkout);
+
+checkout.getOrders(null, function(err, order) {
+  assert.equal(err, null, err);
+  assert(order);
+  assert.equal(order[0].id, na.GET_ORDERS_RESP.data[0].id);
+...</pre></li>
     </ul>
 
 
@@ -2053,7 +2459,23 @@ if (client.verifyCallback(req.raw_body, req.headers['CB-SIGNATURE'])) {
 
   this._getOneHttp({'path': 'currencies'}, callback);
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    assert.equal(obj.data.amount,
+      na.GET_SPOT_RESP.data.amount,
+      'wrong amount: ' + obj.data.amount);
+  });
+});
+
+it('should get supported currencies', function() {
+  client.<span class="apidocCodeKeywordSpan">getCurrencies</span>(function(err, obj) {
+    assert.equal(err, null, err);
+    assert(obj, 'no currencies');
+    assert.equal(obj.length,
+      na.GET_CURRENCIES_RESP.length,
+      'wrong number of currencies: ' + obj.length);
+  });
+});
+...</pre></li>
     </ul>
 
 
@@ -2074,7 +2496,22 @@ if (client.verifyCallback(req.raw_body, req.headers['CB-SIGNATURE'])) {
 
   this._getOneHttp(opts, callback);
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    assert(account, 'no account');
+    assert(account.name, 'no name');
+    assert.equal(account.name, na.NEW_ACCOUNT_NAME_1, 'wrong account name');
+  });
+});
+
+it('should get current user', function() {
+  client.<span class="apidocCodeKeywordSpan">getCurrentUser</span>(function(err, user) {
+    assert.equal(err, null, err);
+    assert(user, 'no user');
+    assert(user.name, "no email");
+    assert.equal(user.name,
+      na.GET_CURRENT_USER_RESP.data.name,
+      'wrong user: ' + user.name);
+...</pre></li>
     </ul>
 
 
@@ -2090,7 +2527,23 @@ if (client.verifyCallback(req.raw_body, req.headers['CB-SIGNATURE'])) {
 
   this._getOneHttp({'path': 'exchange-rates', 'params': params}, callback);
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    assert.equal(obj.length,
+      na.GET_CURRENCIES_RESP.length,
+      'wrong number of currencies: ' + obj.length);
+  });
+});
+
+it('should get exchange rates', function() {
+  client.<span class="apidocCodeKeywordSpan">getExchangeRates</span>({}, function(err, obj) {
+    assert.equal(err, null, err);
+    assert(obj, 'no rates');
+    assert(obj.data.rates, "no rate");
+    assert.equal(obj.data.rates.AED,
+      na.GET_EX_RATES_RESP.data.rates.AED,
+      'wrong rate: ' + obj.data.rates.AED);
+  });
+...</pre></li>
     </ul>
 
 
@@ -2210,7 +2663,23 @@ if (client.verifyCallback(req.raw_body, req.headers['CB-SIGNATURE'])) {
 
   this._getAllHttp(_.assign(args || {}, opts), callback)
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var client = new Client({'apiKey': 'mykey', 'apiSecret': 'mysecret', 'baseApiUri'
+;: na.TEST_BASE_URI});
+
+it('should get orders', function() {
+  client.getCheckout(na.GET_CHECKOUT_RESP.data.code, function(err, checkout) {
+    assert.equal(err, null, err);
+    assert(checkout);
+
+    checkout.<span class="apidocCodeKeywordSpan">getOrders</span>(null, function(err, order) {
+      assert.equal(err, null, err);
+      assert(order);
+      assert.equal(order[0].id, na.GET_ORDERS_RESP.data[0].id);
+    });
+  });
+});
+...</pre></li>
     </ul>
 
 
@@ -2231,7 +2700,23 @@ if (client.verifyCallback(req.raw_body, req.headers['CB-SIGNATURE'])) {
 
   this._getOneHttp(opts, callback);
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    assert.equal(pms.length,
+      na.GET_PAYMENT_METHODS_RESP.data.length,
+      'wrong number of methods: ' + pms.length);
+  });
+});
+
+it('should get payment method', function() {
+  client.<span class="apidocCodeKeywordSpan">getPaymentMethod</span>(na.GET_PAYMENT_METHOD_RESP.data.id,
+    function(err, pm) {
+    assert.equal(err, null, err);
+    assert(pm, 'no payment method');
+    assert.equal(pm.id, na.GET_PAYMENT_METHOD_RESP.data.id,
+      'wrong payment method');
+  });
+});
+...</pre></li>
     </ul>
 
 
@@ -2252,7 +2737,23 @@ if (client.verifyCallback(req.raw_body, req.headers['CB-SIGNATURE'])) {
 
   this._getAllHttp(_.assign(args || {}, opts), callback)
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    assert.equal(obj.data.rates.AED,
+      na.GET_EX_RATES_RESP.data.rates.AED,
+      'wrong rate: ' + obj.data.rates.AED);
+  });
+});
+
+it('should get payment methods', function() {
+  client.<span class="apidocCodeKeywordSpan">getPaymentMethods</span>({}, function(err, pms) {
+    assert.equal(err, null, err);
+    assert(pms, 'no payment methods');
+    assert.equal(pms.length,
+      na.GET_PAYMENT_METHODS_RESP.data.length,
+      'wrong number of methods: ' + pms.length);
+  });
+});
+...</pre></li>
     </ul>
 
 
@@ -2276,7 +2777,23 @@ if (client.verifyCallback(req.raw_body, req.headers['CB-SIGNATURE'])) {
   }
   this._getOneHttp({'path': 'prices/' + currencyPair + '/sell'}, callback);
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    assert.equal(obj.data.amount,
+      na.GET_BUY_PRICE_RESP.data.amount,
+      'wrong amount: ' + obj.data.amount);
+  });
+});
+
+it('should get sell price (undefined)', function() {
+  client.<span class="apidocCodeKeywordSpan">getSellPrice</span>({}, function(err, obj) {
+    assert.equal(err, null, err);
+    assert(obj, 'no price');
+    assert(obj.data.amount, 'no amount');
+    assert.equal(obj.data.amount,
+      na.GET_BUY_PRICE_RESP.data.amount,
+      'wrong amount: ' + obj.data.amount);
+  });
+...</pre></li>
     </ul>
 
 
@@ -2300,7 +2817,23 @@ if (client.verifyCallback(req.raw_body, req.headers['CB-SIGNATURE'])) {
   }
   this._getOneHttp({'path': 'prices/' + currencyPair + '/spot'}, callback);
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    assert.equal(obj.data.amount,
+      na.GET_BUY_PRICE_RESP.data.amount,
+      'wrong amount: ' + obj.data.amount);
+  });
+});
+
+it('should get spot price (undefined)', function() {
+  client.<span class="apidocCodeKeywordSpan">getSpotPrice</span>({}, function(err, obj) {
+    assert.equal(err, null, err);
+    assert(obj, 'no price');
+    assert(obj.data.amount, 'no amount');
+    assert.equal(obj.data.amount,
+      na.GET_SPOT_RESP.data.amount,
+      'wrong amount: ' + obj.data.amount);
+  });
+...</pre></li>
     </ul>
 
 
@@ -2482,7 +3015,22 @@ Errors are thrown for invalid arguments but are otherwise returned as the
     }
   });
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  AccountBase.call(this, client, data);
+}
+
+Account.prototype = Object.create(AccountBase.prototype);
+
+Account.prototype.delete = function(callback) {
+  var path = "accounts/" + this.id;
+  this.client.<span class="apidocCodeKeywordSpan">_deleteHttp</span>(path, callback);
+};
+
+Account.prototype.setPrimary = function(callback) {
+  var path = "accounts/" + this.id + "/primary";
+  this.client._postHttp(path, null, callback);
+};
+...</pre></li>
     </ul>
 
 
@@ -2630,7 +3178,23 @@ options.headers = assign(options.headers, {
     }
   }, headers);
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+Client.prototype.getAccounts = function(args, callback) {
+
+var opts = {
+  'colName'  : 'accounts',
+  'ObjFunc'  : Account
+};
+
+this.<span class="apidocCodeKeywordSpan">_getAllHttp</span>(_.assign(args || {}, opts), callback)
+};
+
+Client.prototype.getAccount = function(account_id, callback) {
+
+var opts = {
+  'path'     : 'accounts/' + account_id,
+  'ObjFunc'  : Account
+...</pre></li>
     </ul>
 
 
@@ -2703,7 +3267,23 @@ this.<span class="apidocCodeKeywordSpan">_getHttp</span>(path, args, function on
     }
   }, headers);
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+Client.prototype.getAccount = function(account_id, callback) {
+
+var opts = {
+  'path'     : 'accounts/' + account_id,
+  'ObjFunc'  : Account
+};
+this.<span class="apidocCodeKeywordSpan">_getOneHttp</span>(opts, callback);
+};
+
+Client.prototype.createAccount = function(args, callback) {
+
+var opts = {
+  'colName'  : 'accounts',
+  'ObjFunc'  : Account,
+...</pre></li>
     </ul>
 
 
@@ -2775,7 +3355,23 @@ this.<span class="apidocCodeKeywordSpan">_postHttp</span>(opts.colName, body, fu
     }
   }, headers);
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+var opts = {
+  'colName'  : 'accounts',
+  'ObjFunc'  : Account,
+  'params'   : args
+};
+
+this.<span class="apidocCodeKeywordSpan">_postOneHttp</span>(opts, callback);
+};
+
+Client.prototype.getCurrentUser = function(callback) {
+
+var opts = {
+  'path'     : 'user',
+  'ObjFunc'  : User
+...</pre></li>
     </ul>
 
 
@@ -2804,7 +3400,23 @@ this.<span class="apidocCodeKeywordSpan">_postHttp</span>(opts.colName, body, fu
     }
   });
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var path = "accounts/" + this.id + "/primary";
+this.client._postHttp(path, null, callback);
+};
+
+Account.prototype.update = function(args, callback) {
+var self = this;
+var path = "accounts/" + this.id;
+this.client.<span class="apidocCodeKeywordSpan">_putHttp</span>(path, args, function myPut(err, result) {
+  if (err) {
+    callback(err, null);
+    return;
+  }
+  var account = new Account(self.client, result.data);
+  callback(null, account);
+});
+...</pre></li>
     </ul>
 
 
@@ -2874,6 +3486,72 @@ this._getHttp(path, args, function onGet(err, result) {
     callback(null, objs, result.pagination);
   }
 }, headers);
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.coinbase.Transfer" id="apidoc.module.coinbase.Transfer">module coinbase.Transfer</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.coinbase.Transfer.Transfer" id="apidoc.element.coinbase.Transfer.Transfer">
+        function <span class="apidocSignatureSpan">coinbase.</span>Transfer
+        <span class="apidocSignatureSpan">(client, data, account)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Transfer(client, data, account) {
+  if (!(this instanceof Transfer)) {
+    return new Transfer(client, data, account);
+  }
+  BaseModel.call(this, client, data);
+  if (!account) { throw new Error("no account arg"); }
+  if (!account.id) { throw new Error("account has no id"); }
+  this.account = account;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.coinbase.Transfer.prototype" id="apidoc.module.coinbase.Transfer.prototype">module coinbase.Transfer.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.coinbase.Transfer.prototype._commit" id="apidoc.element.coinbase.Transfer.prototype._commit">
+        function <span class="apidocSignatureSpan">coinbase.Transfer.prototype.</span>_commit
+        <span class="apidocSignatureSpan">(opts, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_commit = function (opts, callback) {
+  var self = this;
+
+  var path = 'accounts/' + self.account.id + '/' + opts.colName + '/' + self.id + '/commit';
+
+  self.client._postHttp(path, null, function onPut(err, result) {
+    if (!handleError(err, result, callback)) {
+      callback(null, new opts.ObjFunc(self.client, result.data, self.account));
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+Buy.prototype.commit = function(callback) {
+
+  var opts = {
+    'colName' : 'buys',
+    'ObjFunc' : Buy
+  };
+
+  this.<span class="apidocCodeKeywordSpan">_commit</span>(opts, callback);
+};
+
+module.exports = Buy;
 ...</pre></li>
     </ul>
 
@@ -3250,7 +3928,23 @@ this._getHttp(path, args, function onGet(err, result) {
 
   this._postOne(opts, callback)
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    });
+  });
+
+  it('should buy', function() {
+    var args = {
+      "qty": "100"
+    };
+    btcAccount.<span class="apidocCodeKeywordSpan">buy</span>(args, function(err, transfer) {
+      assert.equal(err, null, err);
+      assert(transfer);
+      assert.equal(transfer.id, na.BUY_RESP.data.id,
+        "can not buy: " + JSON.stringify(transfer));
+    });
+  });
+});
+...</pre></li>
     </ul>
 
 
@@ -3270,7 +3964,22 @@ this._getHttp(path, args, function onGet(err, result) {
   };
   this._postOne(opts, callback)
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+});
+
+it('should create address', function() {
+  var args = {
+      "callback_url": "http://www.example.com/callback",
+      "label": "Dalmation donations"
+  };
+  btcAccount.<span class="apidocCodeKeywordSpan">createAddress</span>(args, function(err, result) {
+    assert.equal(err, null, err);
+    assert(result);
+    assert.equal(result.label, na.CREATE_ADDRESS_RESP.data.label,
+      "can not create address: " + JSON.stringify(result));
+  });
+});
+...</pre></li>
     </ul>
 
 
@@ -3286,7 +3995,23 @@ this._getHttp(path, args, function onGet(err, result) {
   var path = "accounts/" + this.id;
   this.client._deleteHttp(path, callback);
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+nock(TEST_BASE_URI)
+.filteringPath(EXPIRE_REGEX, '')
+.post('/accounts/' + ACCOUNT_1.id + '/primary')
+.reply(200, PRIMARY_RESPONSE);
+
+nock(TEST_BASE_URI)
+.filteringPath(EXPIRE_REGEX, '')
+.<span class="apidocCodeKeywordSpan">delete</span>('/accounts/' + ACCOUNT_3.id)
+.reply(204, null);
+
+var MODIFY_ACCOUNT_RESP = {
+"data": {
+  "id": "53752d3e46cd93c93c00000c",
+  "resource": "account",
+  "name": "Satoshi Wallet",
+...</pre></li>
     </ul>
 
 
@@ -3328,7 +4053,23 @@ this._getHttp(path, args, function onGet(err, result) {
   };
   this._getOne(opts, callback)
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    assert(result);
+    assert.equal(result.length, na.GET_ADDRESSES_RESP.data.length,
+      "can not get addresses: " + JSON.stringify(result));
+  });
+});
+
+it('should get address', function() {
+  btcAccount.<span class="apidocCodeKeywordSpan">getAddress</span>(na.GET_ADDRESS_RESP.data.address, function(err, result) {
+    assert.equal(err, null, err);
+    assert(result);
+    assert.equal(result.id, na.GET_ADDRESS_RESP.data.id,
+      "can not get address: " + JSON.stringify(result));
+    assert.equal(result.label, na.GET_ADDRESS_RESP.data.label,
+      "can not get address: " + JSON.stringify(result));
+  });
+...</pre></li>
     </ul>
 
 
@@ -3348,7 +4089,22 @@ this._getHttp(path, args, function onGet(err, result) {
 
   this._getAll(_.assign(args || {}, opts), callback)
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    assert.equal(err, null, err);
+    assert(account);
+    assert.equal(account.name, na.MODIFY_ACCOUNT_RESP.data.name, "can not modify account");
+  });
+});
+
+it('should get addresses', function() {
+  btcAccount.<span class="apidocCodeKeywordSpan">getAddresses</span>(null, function(err, result) {
+    assert.equal(err, null, err);
+    assert(result);
+    assert.equal(result.length, na.GET_ADDRESSES_RESP.data.length,
+      "can not get addresses: " + JSON.stringify(result));
+  });
+});
+...</pre></li>
     </ul>
 
 
@@ -3391,7 +4147,23 @@ this._getHttp(path, args, function onGet(err, result) {
 
   this._getAll(_.assign(args || {}, opts), callback)
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    assert(txn);
+    assert.equal(txn.id, na.REQUEST_MONEY_RESP.data.id,
+      "can not request money: " + JSON.stringify(txn));
+  });
+});
+
+it('should get transfers', function() {
+  btcAccount.<span class="apidocCodeKeywordSpan">getBuys</span>(null, function(err, result) {
+    assert.equal(err, null, err);
+    assert(result);
+    assert.equal(result.length,
+      na.GET_BUYS_RESP.data.length,
+      "can not get transfers: " + JSON.stringify(result));
+  });
+});
+...</pre></li>
     </ul>
 
 
@@ -3499,7 +4271,22 @@ this._getHttp(path, args, function onGet(err, result) {
 
   this._getOne(opts, callback);
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    assert.equal(result.length,
+      na.GET_TRANSACTIONS_RESP.data.length,
+      "can not get transactions: " + JSON.stringify(result));
+  });
+});
+
+it('should get transaction', function() {
+  btcAccount.<span class="apidocCodeKeywordSpan">getTransaction</span>('1234', function(err, txn) {
+    assert.equal(err, null, err);
+    assert(txn);
+    assert.equal(txn.id, na.GET_TRANSACTION_RESP.data.id,
+      "can not get txn: " + JSON.stringify(txn));
+  });
+});
+...</pre></li>
     </ul>
 
 
@@ -3700,7 +4487,24 @@ account.<span class="apidocCodeKeywordSpan">sendMoney</span>(args, function(err,
   var path = "accounts/" + this.id + "/primary";
   this.client._postHttp(path, null, callback);
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  describe('account methods', function() {
+
+var client = new Client({'apiKey': 'mykey', 'apiSecret': 'mysecret', 'baseApiUri'
+;: na.TEST_BASE_URI});
+var btcAccount = new Account(client, {"id": na.ACCOUNT_1.id});
+var usdAccount1 = new Account(client, {"id": na.ACCOUNT_3.id});
+
+it('should setPrimary', function() {
+  btcAccount.<span class="apidocCodeKeywordSpan">setPrimary</span>(function(err, result) {
+    assert.equal(err, null, err);
+    assert(result);
+  });
+});
+
+it('should delete account', function() {
+  usdAccount1.delete(function(err, result) {
+...</pre></li>
     </ul>
 
 
@@ -3716,7 +4520,22 @@ account.<span class="apidocCodeKeywordSpan">sendMoney</span>(args, function(err,
   args.type = 'transfer';
   this._initTxn(args, callback);
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+it('should transfer money', function() {
+  var args = {
+    "to": "5011f33df8182b142400000a",
+    "amount": "1.234",
+    "notes": "Sample transaction for you"
+  };
+  btcAccount.<span class="apidocCodeKeywordSpan">transferMoney</span>(args, function(err, txn) {
+    assert.equal(err, null, err);
+    assert(txn);
+    assert.equal(txn.id, na.TRANSFER_MONEY_RESP.data.id,
+      "can not transfer money: " + JSON.stringify(txn));
+  });
+});
+...</pre></li>
     </ul>
 
 
@@ -3894,7 +4713,23 @@ account.<span class="apidocCodeKeywordSpan">getTransactions</span>(null, functio
 
   this._commit(opts, callback);
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+  describe('buy methods', function() {
+
+    var client = new Client({'apiKey': 'mykey', 'apiSecret': 'mysecret', 'baseApiUri
+': na.TEST_BASE_URI});
+    var account = new Account(client, na.ACCT);
+    var xfer = new Buy(client, na.XFER_1, account);
+    it('should commit transfer', function() {
+      xfer.<span class="apidocCodeKeywordSpan">commit</span>(function(err, update) {
+        assert.equal(err, null, err);
+        assert(update, 'no updated xfer');
+      });
+    });
+  });
+});
+...</pre></li>
     </ul>
 
 
@@ -3943,7 +4778,23 @@ account.<span class="apidocCodeKeywordSpan">getTransactions</span>(null, functio
 
   this.client._postOneHttp(opts, callback);
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  });
+});
+
+it('should create order', function() {
+  client.getCheckout(na.GET_CHECKOUT_RESP.data.id, function(err, checkout) {
+    assert.equal(err, null, err);
+    assert(checkout);
+    checkout.<span class="apidocCodeKeywordSpan">createOrder</span>(function(err, order) {
+      assert.equal(err, null, err);
+      assert(order);
+      assert.equal(order.id, na.CREATE_ORDER_RESP.data.id);
+    });
+  });
+
+});
+...</pre></li>
     </ul>
 
 
@@ -3964,7 +4815,23 @@ account.<span class="apidocCodeKeywordSpan">getTransactions</span>(null, functio
 
   this.client._getAllHttp(_.assign(args || {}, opts), callback)
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var client = new Client({'apiKey': 'mykey', 'apiSecret': 'mysecret', 'baseApiUri'
+;: na.TEST_BASE_URI});
+
+it('should get orders', function() {
+  client.getCheckout(na.GET_CHECKOUT_RESP.data.code, function(err, checkout) {
+    assert.equal(err, null, err);
+    assert(checkout);
+
+    checkout.<span class="apidocCodeKeywordSpan">getOrders</span>(null, function(err, order) {
+      assert.equal(err, null, err);
+      assert(order);
+      assert.equal(order[0].id, na.GET_ORDERS_RESP.data[0].id);
+    });
+  });
+});
+...</pre></li>
     </ul>
 
 
@@ -4013,7 +4880,23 @@ account.<span class="apidocCodeKeywordSpan">getTransactions</span>(null, functio
 
   this._commit(opts, callback);
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+  describe('buy methods', function() {
+
+    var client = new Client({'apiKey': 'mykey', 'apiSecret': 'mysecret', 'baseApiUri
+': na.TEST_BASE_URI});
+    var account = new Account(client, na.ACCT);
+    var xfer = new Buy(client, na.XFER_1, account);
+    it('should commit transfer', function() {
+      xfer.<span class="apidocCodeKeywordSpan">commit</span>(function(err, update) {
+        assert.equal(err, null, err);
+        assert(update, 'no updated xfer');
+      });
+    });
+  });
+});
+...</pre></li>
     </ul>
 
 
@@ -4070,7 +4953,24 @@ account.<span class="apidocCodeKeywordSpan">getTransactions</span>(null, functio
     }
   });
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+  describe('order methods', function() {
+
+var client = new Client({'apiKey': 'mykey', 'apiSecret': 'mysecret', 'baseApiUri'
+;: na.TEST_BASE_URI});
+var order = new Order(client, na.REFUND_RESP.data);
+it('should refund order', function() {
+  var args = {};
+  order.<span class="apidocCodeKeywordSpan">refund</span>(args, function(err, order) {
+    assert.equal(err, null, err);
+    assert(order, 'no refund');
+    assert(order.id);
+    assert.equal(order.id, na.REFUND_RESP.data.id, 'wrong order');
+    assert(order.refund_transaction.id);
+    assert.equal(order.refund_transaction.id,
+      na.REFUND_RESP.data.refund_transaction.id, 'no refund txn');
+...</pre></li>
     </ul>
 
 
@@ -4119,7 +5019,23 @@ account.<span class="apidocCodeKeywordSpan">getTransactions</span>(null, functio
 
   this._commit(opts, callback);
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+  describe('buy methods', function() {
+
+    var client = new Client({'apiKey': 'mykey', 'apiSecret': 'mysecret', 'baseApiUri
+': na.TEST_BASE_URI});
+    var account = new Account(client, na.ACCT);
+    var xfer = new Buy(client, na.XFER_1, account);
+    it('should commit transfer', function() {
+      xfer.<span class="apidocCodeKeywordSpan">commit</span>(function(err, update) {
+        assert.equal(err, null, err);
+        assert(update, 'no updated xfer');
+      });
+    });
+  });
+});
+...</pre></li>
     </ul>
 
 
@@ -4176,7 +5092,21 @@ account.<span class="apidocCodeKeywordSpan">getTransactions</span>(null, functio
     }
   });
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+        assert.equal(txn.id, na.COMPLETE_RESP.data.id,
+          'wrong txn id');
+        assert.equal(txn.status, 'pending', 'wrong txn status');
+      });
+    });
+
+    it('should cancel transaction', function() {
+      txn.<span class="apidocCodeKeywordSpan">cancel</span>(function(err, res) {
+        assert.equal(err, null, err);
+      });
+    });
+  });
+});
+...</pre></li>
     </ul>
 
 
@@ -4202,7 +5132,23 @@ account.<span class="apidocCodeKeywordSpan">getTransactions</span>(null, functio
     }
   });
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+it('should resend transaction', function() {
+  txn.resend(function(err, res) {
+    assert.equal(err, null, err);
+  });
+});
+
+it('should complete transaction', function() {
+  txn.<span class="apidocCodeKeywordSpan">complete</span>(function(err, txn) {
+    assert.equal(err, null, err);
+    assert(txn, 'no txn');
+    assert(txn.id, 'no txn id');
+    assert.equal(txn.id, na.COMPLETE_RESP.data.id,
+      'wrong txn id');
+    assert.equal(txn.status, 'pending', 'wrong txn status');
+  });
+...</pre></li>
     </ul>
 
 
@@ -4228,7 +5174,24 @@ account.<span class="apidocCodeKeywordSpan">getTransactions</span>(null, functio
     }
   });
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  });
+
+  describe('transaction methods', function() {
+
+var client = new Client({'apiKey': 'mykey', 'apiSecret': 'mysecret', 'baseApiUri'
+;: na.TEST_BASE_URI});
+var txn = new Transaction(client, na.TXN_1, {'id': 'A1234'});
+it('should resend transaction', function() {
+  txn.<span class="apidocCodeKeywordSpan">resend</span>(function(err, res) {
+    assert.equal(err, null, err);
+  });
+});
+
+it('should complete transaction', function() {
+  txn.complete(function(err, txn) {
+    assert.equal(err, null, err);
+...</pre></li>
     </ul>
 
 
@@ -4377,7 +5340,23 @@ ClientBase.prototype._generateSignature = function(path, method, bodyStr) {
 
   this._commit(opts, callback);
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+  describe('buy methods', function() {
+
+    var client = new Client({'apiKey': 'mykey', 'apiSecret': 'mysecret', 'baseApiUri
+': na.TEST_BASE_URI});
+    var account = new Account(client, na.ACCT);
+    var xfer = new Buy(client, na.XFER_1, account);
+    it('should commit transfer', function() {
+      xfer.<span class="apidocCodeKeywordSpan">commit</span>(function(err, update) {
+        assert.equal(err, null, err);
+        assert(update, 'no updated xfer');
+      });
+    });
+  });
+});
+...</pre></li>
     </ul>
 
 
