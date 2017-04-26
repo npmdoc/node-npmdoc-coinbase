@@ -1,6 +1,6 @@
 # npmdoc-coinbase
 
-#### api documentation for  [coinbase (v2.0.6)](https://github.com/coinbase/coinbase-node)  [![npm package](https://img.shields.io/npm/v/npmdoc-coinbase.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-coinbase) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-coinbase.svg)](https://travis-ci.org/npmdoc/node-npmdoc-coinbase)
+#### basic api documentation for  [coinbase (v2.0.6)](https://github.com/coinbase/coinbase-node)  [![npm package](https://img.shields.io/npm/v/npmdoc-coinbase.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-coinbase) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-coinbase.svg)](https://travis-ci.org/npmdoc/node-npmdoc-coinbase)
 
 #### The Coinbase API for Node.js
 
@@ -80,7 +80,8 @@
     "scripts": {
         "test": "mocha -R spec"
     },
-    "version": "2.0.6"
+    "version": "2.0.6",
+    "bin": {}
 }
 ```
 
